@@ -69881,7 +69881,7 @@
               duration: r,
             }
           : r < eI
-          ? { absoluteText: s, relativeText: "刚才", duration: eI - r }
+          ? { absoluteText: s, relativeText: "刚刚", duration: eI - r }
           : r < tI
           ? { absoluteText: s, relativeText: i, duration: eI }
           : r < nI
@@ -71337,7 +71337,7 @@
           ? ke.createElement(
               "span",
               null,
-              "上次拉取 ",
+              "拉取请求 ",
               ke.createElement(sI, { date: e })
             )
           : "Never fetched";
@@ -77652,7 +77652,7 @@
             ke.Fragment,
             null,
             t,
-            " menu or",
+            " 菜单 或",
             " ",
             this.renderDiscoverabilityKeyboardShortcut(e)
           );
@@ -81378,7 +81378,7 @@
             ke.createElement(
               "span",
               { className: "with-indicator", id: "changes-tab" },
-              ke.createElement("span", null, "变更"),
+              ke.createElement("span", null, "更改"),
               this.renderChangesBadge()
             ),
             ke.createElement(
@@ -86775,7 +86775,7 @@
               ke.createElement(ju, { text: e.text[0], highlight: t.title })
             ),
             e.archived &&
-              ke.createElement("div", { className: "archived" }, "已存档")
+              ke.createElement("div", { className: "archived" }, "公共存档")
           );
         renderPostFilter = () => {
           const e = "刷新仓库列表";
@@ -88253,7 +88253,7 @@
               const t =
                   ![nn.UpdateNotChecked, nn.UpdateNotAvailable].includes(e) ||
                   xr(),
-                n = "Check for Updates";
+                n = "检查更新";
               return ke.createElement(
                 fT,
                 null,
@@ -88292,7 +88292,7 @@
             ? ke.createElement(
                 "p",
                 { className: "update-status" },
-                "You have the latest version (last checked",
+                "您拥有最新版本 (last checked",
                 " ",
                 ke.createElement(sI, { date: e }),
                 ")"
@@ -88363,7 +88363,7 @@
               ke.createElement(
                 cD,
                 { uri: "https://desktop.github.com/beta" },
-                "Beta Channel"
+                "Beta 频道"
               )
             )
           );
@@ -88371,7 +88371,7 @@
         render() {
           const e = this.props.applicationName,
             t = this.props.applicationVersion,
-            n = ke.createElement(cD, { uri: gL }, "release notes"),
+            n = ke.createElement(cD, { uri: gL }, "发行说明"),
             r = `Version ${t}`,
             s = "Dialog_about";
           return ke.createElement(
@@ -88396,7 +88396,7 @@
                   height: "64",
                 })
               ),
-              ke.createElement("h1", { id: s }, "About ", e),
+              ke.createElement("h1", { id: s }, "关于 ", e),
               ke.createElement(
                 "p",
                 { className: "no-padding" },
@@ -88419,7 +88419,7 @@
                 ke.createElement(
                   cD,
                   { onClick: this.props.onShowTermsAndConditions },
-                  "Terms and Conditions"
+                  "条款和条件"
                 )
               ),
               ke.createElement(
