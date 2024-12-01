@@ -8256,7 +8256,7 @@
                 accelerator: "CmdOrCtrl+Shift+U",
                 click: Oe("update-branch-with-contribution-target-branch")
             }, {
-                label: "与分支比较(&C)",
+                label: "分支对比(&C)",
                 id: "compare-to-branch",
                 accelerator: "CmdOrCtrl+Shift+B",
                 click: Oe("compare-to-branch")
@@ -8322,7 +8322,7 @@
                     n.shell.openExternal("https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/keyboard-shortcuts").catch((e => log.error("Failed opening keyboard shortcuts page", e)))
                 }
             }, {
-                label: "在文件管理器中显示日志(&H)",
+                label: "在文件管理器中查看日志(&H)",
                 click() {
                     const e = o();
                     (0, g.mkdir)(e, {
