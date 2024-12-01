@@ -104887,14 +104887,13 @@
               return this.withPushPullFetch(e, async () => {
                 const n = this.getBranchToPush(e, t);
                 if (void 0 === n) return;
-                const s = n.upstreamRemoteName || r.name;
-                const displayRemoteName = s === 'origin' ? '远程仓库' : s;
-                  i = `推送到 ${displayRemoteName}`;
+                const s = n.upstreamRemoteName || r.name,
+                  i = `推送到 ${s}`;
                 this.updatePushPullFetchProgress(e, {
                   kind: "push",
                   title: i,
                   value: 0,
-                  remote: displayRemoteName,
+                  remote: s,
                   branch: n.name,
                 });
                 let o = 2.5,
@@ -104902,7 +104901,7 @@
                 const l = (1 / (o + a)) * 0.9;
                 (o *= l), (a *= l);
                 const c = { type: ht.Push, repository: e },
-                  u = { name: displayRemoteName, url: r.url };
+                  u = { name: s, url: r.url };
                 u.name !== r.name &&
                   aT(
                     "remoteNameMismatch",
