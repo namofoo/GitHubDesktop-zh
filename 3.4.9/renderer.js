@@ -71246,7 +71246,7 @@
           switch (e) {
             case AI.Fetch:
               return {
-                title: `拉取 ${translatedRemoteName}`,
+                title: `同步 ${translatedRemoteName}`,
                 description: `拉取最新的更改 ${translatedRemoteName}`,
                 action: this.props.fetch,
                 icon: zu,
@@ -105062,7 +105062,7 @@
                     theirBranch: r.branch.upstream,
                     currentBranch: r.branch.name,
                   }));
-                const o = `Pulling ${n.name}`,
+                const o = `拉取 ${n.name}`,
                   a = "pull";
                 this.updatePushPullFetchProgress(e, {
                   kind: a,
@@ -105085,7 +105085,7 @@
                         await (async function (e, t, n) {
                           let r = { env: await Zf(t.url), expectedErrors: Bf };
                           if (n) {
-                            const e = `Pulling ${t.name}`,
+                            const e = `拉取 ${t.name}`,
                               s = "pull";
                             (r = await dg(
                               { ...r, trackLFSProgress: !0 },
@@ -105144,7 +105144,7 @@
                         log.error("Failed updating remote HEAD", e)
                       ));
                   const u = r + o,
-                    h = "Refreshing repository";
+                    h = "刷新仓库";
                   this.updatePushPullFetchProgress(e, {
                     kind: "generic",
                     title: h,
