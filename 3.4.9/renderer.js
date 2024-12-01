@@ -39732,7 +39732,8 @@
                     env: await Zf(t.url),
                   };
                   if (n) {
-                    const e = `获取 ${t.name}`,
+                    const remoteName = t.name === 'origin' ? '远程仓库' : t.name;
+                    const e = `获取 ${remoteName}`,
                       i = "fetch";
                     (s = await dg(
                       { ...s, trackLFSProgress: !0, isBackgroundTask: r },
@@ -69703,12 +69704,12 @@
               isCommitting: n,
             } = this.props,
             { files: r } = e,
-            s = 1 === r.length ? "文件" : "files",
+            s = 1 === r.length ? "文件" : "文件",
             i = `${r.length} 个已更改的${s}`,
             o = r.filter(
               (e) => e.selection.getSelectionType() !== Au.None
             ).length,
-            a = 1 === r.length ? "文件" : "files",
+            a = 1 === r.length ? "文件" : "文件",
             l = `${o}/${r.length} 已更改的${a}包含在内`,
             c = KP(e, t),
             u = 0 === r.length || n || null !== t;
@@ -71495,6 +71496,9 @@
             pullWithRebase: c,
             forcePushBranchState: u,
           } = this.props;
+
+          const translatedRemoteName = s === 'origin' ? '远程仓库' : s;
+
           if (null !== e) return this.progressButton(e, t);
           if (null === s) return this.publishRepositoryButton(this.push);
           if (o === Nr.Unborn) return this.unbornRepositoryButton();
@@ -71509,7 +71513,7 @@
           }
           const { ahead: h, behind: p } = n;
           return 0 === h && 0 === p && 0 === r
-            ? this.fetchButton(s, l, this.fetch)
+            ? this.fetchButton(translatedRemoteName, l, this.fetch)
             : u === cy.Recommended
             ? this.forcePushButton(s, n, r, l, this.forcePushWithLease)
             : p > 0
