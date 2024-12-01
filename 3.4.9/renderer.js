@@ -104887,9 +104887,8 @@
               return this.withPushPullFetch(e, async () => {
                 const n = this.getBranchToPush(e, t);
                 if (void 0 === n) return;
-                const s = n.upstreamRemoteName || r.name;
-                const displayRemoteName = s === 'origin' ? '远程仓库' : s;
-                  i = `推送到 ${displayRemoteName}`;
+                const s = n.upstreamRemoteName || r.name,
+                  i = `推送到 ${s}`;
                 this.updatePushPullFetchProgress(e, {
                   kind: "push",
                   title: i,
