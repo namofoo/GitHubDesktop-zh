@@ -4400,7 +4400,7 @@
             "The requested URL returned error: 403":
               n.HTTPSAuthenticationFailed,
             "fatal: [Tt]he remote end hung up unexpectedly":
-              n.RemoteDisconnection,
+              n.RemoteDisconnection, 
             "fatal: unable to access '(.+)': Failed to connect to (.+): Host is down":
               n.HostDown,
             "Cloning into '(.+)'...\nfatal: unable to access '(.+)': Could not resolve host: (.+)":
@@ -39732,7 +39732,7 @@
                     env: await Zf(t.url),
                   };
                   if (n) {
-                    const e = `Fetching ${t.name}`,
+                    const e = `获取 ${t.name}`,
                       i = "fetch";
                     (s = await dg(
                       { ...s, trackLFSProgress: !0, isBackgroundTask: r },
@@ -40794,7 +40794,7 @@
                   ? 1 / 0
                   : Date.now() - this.lastRefreshStartedAt,
               t = Math.max(9e5 - e, 0) + gb,
-              n = isFinite(e) ? `${(e / 1e3).toFixed(3)}s ago` : "never",
+              n = isFinite(e) ? `${(e / 1e3).toFixed(3)}s 前` : "never",
               r = `${(t / 1e3).toFixed(3)}s`;
             log.debug(
               `[RepositoryIndicatorUpdater] Last refresh: ${n}, scheduling in ${r}`
@@ -57830,7 +57830,7 @@
             displayClearButton: !0,
             prefixedIcon: Jl,
             autoFocus: !0,
-            placeholder: this.props.placeholderText || "Filter",
+            placeholder: this.props.placeholderText || "搜索过滤",
             className: "filter-list-filter-field",
             onValueChanged: this.onFilterValueChanged,
             onEnterPressed: this.onEnterPressed,
@@ -62951,18 +62951,18 @@
             ke.createElement(
               "p",
               null,
-              "Editing ",
+              "编辑 ",
               ke.createElement(qD, null, ".gitignore"),
-              ". This file specifies intentionally untracked files that Git should ignore. Files already tracked by Git are not affected.",
+              ". 此文件指定 Git 应忽略未跟踪的文件.Git 已跟踪的文件不受影响.",
               " ",
               ke.createElement(
                 cD,
                 { onClick: this.props.onShowExamples },
-                "Learn more about gitignore files"
+                "了解有关 gitignore 文件的更多信息"
               )
             ),
             ke.createElement(VD, {
-              placeholder: "Ignored files",
+              placeholder: "忽略的文件",
               value: this.props.text || "",
               onValueChanged: this.props.onIgnoreTextChanged,
               textareaClassName: "gitignore",
@@ -63275,7 +63275,7 @@
               fT,
               null,
               ke.createElement(mT, {
-                label: "Name",
+                label: "名称",
                 value: this.props.name,
                 disabled: this.props.disabled,
                 onValueChanged: this.props.onNameChanged,
@@ -63306,7 +63306,7 @@
             ke.createElement(
               dD,
               {
-                label: "Email",
+                label: "邮箱",
                 value: this.state.emailIsOther ? eM : this.props.email,
                 disabled: this.props.disabled,
                 onChange: this.onEmailSelectChange,
@@ -63398,7 +63398,7 @@
               ke.createElement(
                 "h2",
                 { id: "git-config-heading" },
-                "For this repository I wish to"
+                "对于这个仓库,我希望"
               ),
               ke.createElement(
                 fT,
@@ -64643,7 +64643,7 @@
               : "Amend"
             : e
             ? "Committing"
-            : "Commit";
+            : "提交";
         }
         getCommittingButtonText() {
           const { branch: e } = this.props,
@@ -64654,7 +64654,7 @@
                 ke.Fragment,
                 null,
                 t,
-                " to ",
+                " 至 ",
                 ke.createElement("strong", null, e)
               );
         }
@@ -64685,7 +64685,7 @@
           return e
             ? this.getButtonTitle()
             : mM(this.summaryOrPlaceholder)
-            ? "A commit summary is required to commit"
+            ? "提交时需要提交摘要"
             : !this.props.anyFilesSelected && this.props.anyFilesAvailable
             ? "Select one or more files to commit"
             : this.props.isCommitting
@@ -69534,7 +69534,7 @@
             ));
         };
         getPlaceholderMessage(e, n) {
-          if (!n) return "Summary (required)";
+          if (!n) return "摘要（必填）";
           const r = e[0],
             s = (0, t.basename)(r.path);
           switch (r.status.kind) {
@@ -71578,7 +71578,7 @@
           });
         }
         fetchButton(e, t, n) {
-          const r = `Fetch ${e}`;
+          const r = `获取 ${e}`;
           return ke.createElement(SI, {
             ...this.defaultButtonProps(),
             title: r,
@@ -71614,7 +71614,7 @@
             EI,
             {
               ...this.defaultDropdownProps(),
-              title: `Push ${e}`,
+              title: `推送 ${e}`,
               description: xI(r),
               icon: As,
               onClick: s,
@@ -71630,7 +71630,7 @@
             EI,
             {
               ...this.defaultDropdownProps(),
-              title: `Force push ${e}`,
+              title: `强制推送 ${e}`,
               description: xI(r),
               icon: DI,
               onClick: s,
@@ -72217,12 +72217,12 @@
                 ke.createElement(
                   "div",
                   { className: "title" },
-                  "You're all set!"
+                  "一切已就绪！"
                 ),
                 ke.createElement(
                   "div",
                   { className: "no-prs" },
-                  "No open pull requests in ",
+                  "没有打开的拉取请求 ",
                   ke.createElement(qD, null, this.props.repositoryName)
                 )
               );
@@ -72238,15 +72238,15 @@
             ? ke.createElement(
                 "div",
                 { className: "call-to-action" },
-                "Would you like to",
+                "你是否想要",
                 " ",
                 ke.createElement(
                   cD,
                   { onClick: this.props.onCreateBranch },
-                  "create a new branch"
+                  "创建新分支"
                 ),
                 " ",
-                "and get going on your next project?"
+                "并开始你的下一个项目?"
               )
             : ke.createElement(
                 "div",
@@ -72413,7 +72413,7 @@
           this.props.dispatcher.refreshPullRequests(this.props.repository);
         };
         renderPostFilter = () => {
-          const e = "Refresh the list of pull requests";
+          const e = "刷新拉取请求列表";
           return ke.createElement(
             cs,
             {
@@ -75694,7 +75694,7 @@
                   selectedIndex: this.props.selectedTab,
                   allowDragOverSwitching: !0,
                 },
-                ke.createElement("span", { id: "branches-tab" }, "Branches"),
+                ke.createElement("span", { id: "branches-tab" }, "分支"),
                 ke.createElement(
                   "span",
                   { id: "pull-requests-tab", className: "pull-request-tab" },
@@ -77874,7 +77874,7 @@
         onPublishBranchClicked = () =>
           this.props.dispatcher.incrementMetric("suggestedStepPublishBranch");
         renderPullBranchAction(e, t, n) {
-          const r = "pull",
+          const r = "拉取",
             s = this.getMenuItemInfo(r);
           if (void 0 === s)
             return (
@@ -77884,23 +77884,23 @@
             o = ke.createElement(
               ke.Fragment,
               null,
-              "The current branch (",
+              "当前分支 (",
               ke.createElement(qD, null, e.branch.name),
-              ") has",
+              ") 有",
               " ",
-              1 === n.behind ? "a commit" : "commits",
-              " on",
+              1 === n.behind ? "提交" : "commits",
+              " 在",
               " ",
               i ? "GitHub" : "the remote",
-              " that",
+              " 这",
               " ",
-              1 === n.behind ? "does not" : "do not",
-              " exist on your machine."
+              1 === n.behind ? "没有" : "do not",
+              " 存在于您的机器上."
             ),
             a = ke.createElement(
               ke.Fragment,
               null,
-              "Always available in the toolbar when there are remote changes or",
+              "当有远程更改或",
               " ",
               this.renderDiscoverabilityKeyboardShortcut(s)
             ),
@@ -77932,19 +77932,19 @@
           n.ahead > 0 &&
             (a.push("commits"),
             l.push(
-              1 === n.ahead ? "1 local commit" : `${n.ahead} local commits`
+              1 === n.ahead ? "1 个本地提交" : `${n.ahead} local commits`
             )),
             null !== r &&
               r.length > 0 &&
               (a.push("tags"),
               l.push(1 === r.length ? "1 tag" : `${r.length} tags`));
-          const c = `You have ${l.join(" and ")} waiting to be pushed to ${
+          const c = `你有 ${l.join(" and ")} 等待被推到 ${
               o ? "GitHub" : "the remote"
             }.`,
             u = ke.createElement(
               ke.Fragment,
               null,
-              "Always available in the toolbar when there are local commits waiting to be pushed or ",
+              "当有本地提交等待推送或",
               this.renderDiscoverabilityKeyboardShortcut(i)
             ),
             h = `Push ${a.join(" and ")} to the ${t.name} remote`,
@@ -83848,9 +83848,9 @@
           return ke.createElement(
             "span",
             null,
-            "Help GitHub Desktop improve by submitting",
+            "通过提交帮助 GitHub Desktop 改进",
             " ",
-            ke.createElement(cD, { uri: UA }, "usage stats")
+            ke.createElement(cD, { uri: UA }, "使用统计")
           );
         }
         render() {
@@ -83860,9 +83860,9 @@
             ke.createElement(
               "div",
               { className: "advanced-section" },
-              ke.createElement("h2", null, "Background updates"),
+              ke.createElement("h2", null, "后台更新"),
               ke.createElement(_T, {
-                label: "Show status icons in the repository list",
+                label: "在仓库列表中显示状态图标",
                 value: this.props.repositoryIndicatorsEnabled ? IT.On : IT.Off,
                 onChange: this.onRepositoryIndicatorsEnabledChanged,
                 ariaDescribedBy: "periodic-fetch-description",
@@ -83876,32 +83876,32 @@
                 ke.createElement(
                   "p",
                   null,
-                  "These icons indicate which repositories have local or remote changes, and require the periodic fetching of repositories that are not currently selected."
+                  "这些图标指示哪些仓库具有本地或远程更改,并需要定期获取当前未选择的仓库.这些图标仅适用于当前选定的仓库."
                 ),
                 ke.createElement(
                   "p",
                   null,
-                  "Turning this off will not stop the periodic fetching of your currently selected repository, but may improve overall app performance for users with many repositories."
+                  "关闭此功能不会停止定期获取当前选定的仓库,但可能会提高拥有多个仓库的用户整体应用程序性能。"
                 )
               )
             ),
             ke.createElement(
               "div",
               { className: "advanced-section" },
-              ke.createElement("h2", null, "Usage"),
+              ke.createElement("h2", null, "使用方式"),
               ke.createElement(_T, {
                 label: this.reportDesktopUsageLabel(),
                 value: this.state.optOutOfUsageTracking ? IT.Off : IT.On,
                 onChange: this.onReportingOptOutChanged,
               })
             ),
-            ke.createElement("h2", null, "Network and credentials"),
+            ke.createElement("h2", null, "网络和凭证"),
             this.renderSSHSettings(),
             ke.createElement(
               "div",
               { className: "advanced-section" },
               ke.createElement(_T, {
-                label: "Use Git Credential Manager",
+                label: "使用 Git 凭证管理器",
                 value: this.state.useExternalCredentialHelper ? IT.On : IT.Off,
                 onChange: this.onUseExternalCredentialHelperChanged,
                 ariaDescribedBy: "use-external-credential-helper-description",
@@ -83915,16 +83915,16 @@
                 ke.createElement(
                   "p",
                   null,
-                  "Use",
+                  "使用",
                   " ",
                   ke.createElement(
                     cD,
                     { uri: "https://gh.io/gcm" },
-                    "Git Credential Manager",
+                    "Git 凭证管理器",
                     " "
                   ),
                   " ",
-                  "for private repositories outside of GitHub.com. This feature is experimental and subject to change."
+                  "管理 GitHub.com 之外的私有仓库.此功能尚处于实验阶段,可能会发生变化."
                 )
               )
             )
@@ -83936,7 +83936,7 @@
                 "div",
                 { className: "advanced-section" },
                 ke.createElement(_T, {
-                  label: "Use system OpenSSH (recommended)",
+                  label: "使用系统 OpenSSH (推荐)",
                   value: this.props.useWindowsOpenSSH ? IT.On : IT.Off,
                   onChange: this.onUseWindowsOpenSSHChanged,
                 })
@@ -83988,21 +83988,21 @@
               },
               "GitHub 默认分支名称是 ",
               ke.createElement(qD, null, "main"),
-              ". You may want to change it due to different workflows, or because your integrations still require the historical default branch name of ",
+              ". 您可能希望根据不同的工作流程更改它,或者因为您的集成仍然需要历史默认分支名称 ",
               ke.createElement(qD, null, "master"),
               "."
             ),
             ke.createElement(
               "p",
               { className: "git-settings-description" },
-              "这些偏好设置将",
+              "这些设置将更改",
               " ",
               this.props.selectedExternalEditor &&
                 this.props.globalGitConfigPath
                 ? ke.createElement(
                     cD,
                     { onClick: this.openGlobalGitConfigInEditor },
-                    "编辑您的全局 Git 配置文件"
+                    "编辑全局 Git 配置文件"
                   )
                 : "edit your global Git config file",
               "."
@@ -84114,12 +84114,12 @@
           return ke.createElement(
             "div",
             { className: "appearance-section" },
-            ke.createElement("h2", { id: "diff-heading" }, "Diff"),
+            ke.createElement("h2", { id: "diff-heading" }, "差异"),
             ke.createElement(
               dD,
               {
                 value: this.state.selectedTabSize.toString(),
-                label: "Tab size",
+                label: "制表符大小",
                 onChange: this.onSelectedTabSizeChanged,
               },
               [1, 2, 3, 4, 5, 6, 8, 10, 12].map((e) =>
@@ -84561,11 +84561,11 @@
         renderSwitchBranchOptionLabel = (e) => {
           switch (e) {
             case Qw.AskForConfirmation:
-              return "Ask me where I want the changes to go";
+              return "询问我要在哪里进行更改";
             case Qw.MoveToNewBranch:
-              return "Always bring my changes to my new branch";
+              return "始终将更改应用到新分支";
             case Qw.StashOnCurrentBranch:
-              return "Always stash and leave my changes on the current branch";
+              return "始终将更改应用当前分支";
             default:
               return ot(0, `Unknown uncommitted changes strategy: ${e}`);
           }
@@ -84585,7 +84585,7 @@
             ke.createElement(
               "h2",
               { id: "switch-branch-heading" },
-              "If I have changes and I switch branches..."
+              "如果有变更并切换分支"
             ),
             ke.createElement(XD, {
               ariaLabelledBy: "switch-branch-heading",
@@ -84607,7 +84607,7 @@
               ke.createElement(
                 "h2",
                 { id: "show-confirm-dialog-heading" },
-                "Show a confirmation dialog before..."
+                "在这些操作之前显示确认对话框"
               ),
               ke.createElement(
                 "div",
@@ -84626,7 +84626,7 @@
                   onChange: this.onConfirmDiscardChangesChanged,
                 }),
                 ke.createElement(_T, {
-                  label: "Discarding changes permanently",
+                  label: "永久丢弃更改",
                   value: this.state.confirmDiscardChangesPermanently
                     ? IT.On
                     : IT.Off,
@@ -84643,7 +84643,7 @@
                   onChange: this.onConfirmCheckoutCommitChanged,
                 }),
                 ke.createElement(_T, {
-                  label: "Force pushing",
+                  label: "强制推送",
                   value: this.state.confirmForcePush ? IT.On : IT.Off,
                   onChange: this.onConfirmForcePushChanged,
                 }),
@@ -84658,9 +84658,9 @@
             ke.createElement(
               "div",
               { className: "advanced-section" },
-              ke.createElement("h2", null, "Commit Length"),
+              ke.createElement("h2", null, "提交长度"),
               ke.createElement(_T, {
-                label: "Show commit length warning",
+                label: "显示提交长度警告",
                 value: this.props.showCommitLengthWarning ? IT.On : IT.Off,
                 onChange: this.onShowCommitLengthWarningChanged,
               })
@@ -84699,7 +84699,7 @@
               ke.createElement(
                 "p",
                 { className: "git-settings-description" },
-                "Allows the display of notifications when high-signal events take place in the current repository.",
+                "允许当前仓库中发生高信号事件时显示通知. ",
                 this.renderNotificationHint()
               )
             )
@@ -84750,14 +84750,14 @@
               ke.createElement(cD, { uri: r }, "Notifications Settings"),
               "."
             );
-          const s = n ? "properly configured" : "enabled";
+          const s = n ? "properly configured" : "已启用";
           return ke.createElement(
             ke.Fragment,
             null,
             " ",
-            "Make sure notifications are ",
+            "确保通知显示",
             s,
-            " for GitHub Desktop in the",
+            "对于 GitHub Desktop",
             " ",
             ke.createElement(cD, { uri: r }, "通知设置"),
             "."
@@ -84775,7 +84775,7 @@
             ke.createElement(
               "div",
               { className: "advanced-section" },
-              ke.createElement("h2", null, "Accessibility"),
+              ke.createElement("h2", null, "辅助可访问性"),
               ke.createElement(_T, {
                 label: "下划线链接",
                 value: this.props.underlineLinks ? IT.On : IT.Off,
@@ -84788,11 +84788,11 @@
                   id: "underline-setting-description",
                   className: "git-settings-description",
                 },
-                "When enabled, GitHub Desktop will underline links in commit messages, comments, and other text fields. This can help make links easier to distinguish. ",
+                "启用后,GitHub Desktop将在提交消息、评论和其他文本字段中为链接加下划线.这可以帮助更容易区分链接. ",
                 this.renderExampleLink()
               ),
               ke.createElement(_T, {
-                label: "Show check marks in the diff",
+                label: "在差异中显示勾选标记",
                 value: this.props.showDiffCheckMarks ? IT.On : IT.Off,
                 onChange: this.onShowDiffCheckMarksChanged,
                 ariaDescribedBy: "diff-checkmarks-setting-description",
@@ -84803,7 +84803,7 @@
                   id: "diff-checkmarks-setting-description",
                   className: "git-settings-description",
                 },
-                "When enabled, check marks will be displayed along side the line numbers and groups of line numbers in the diff when committing. When disabled, the line number controls will be less prominent."
+                "启用后在提交时差异中的行号和行号组旁边将显示勾选标记. 当禁用时,行号控件将不那么显眼."
               )
             )
           );
@@ -84815,7 +84815,7 @@
           return ke.createElement(
             "span",
             { className: "link-button-component", style: e },
-            "This is an example link"
+            "这是一个示例链接"
           );
         }
         onUnderlineLinksChanged = (e) => {
@@ -86314,7 +86314,7 @@
             ke.createElement(
               dD,
               {
-                label: "Git ignore",
+                label: "Git 忽略文件",
                 value: this.state.gitIgnore,
                 onChange: this.onGitIgnoreChange,
               },
