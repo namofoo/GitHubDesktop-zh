@@ -1,4 +1,3 @@
-/*! For license information please see renderer.js.LICENSE.txt */
 (() => {
   var e = {
       4980: (e, t, n) => {
@@ -62892,7 +62891,7 @@
             ke.createElement(
               "p",
               null,
-              "Primary remote repository (",
+              "远程仓库 (",
               e.name,
               ")"
             ),
@@ -63375,9 +63374,9 @@
         renderConfigOptionLabel = (e) => {
           switch (e) {
             case nM.Global:
-              return "Use my global Git config";
+              return "使用全局 Git 配置";
             case nM.Local:
-              return "Use a local Git config";
+              return "使用本地 Git 配置";
             default:
               return ot(0, `Unknown git config location: ${e}`);
           }
@@ -63514,7 +63513,7 @@
             PD,
             {
               id: "repository-settings",
-              title: "Repository settings",
+              title: "仓库设置",
               onDismissed: this.props.onDismissed,
               onSubmit: this.onSubmit,
               disabled: this.state.disabled,
@@ -63534,7 +63533,7 @@
                   "span",
                   null,
                   ke.createElement(ps, { className: "icon", symbol: ec }),
-                  "Remote"
+                  "远程"
                 ),
                 ke.createElement(
                   "span",
@@ -63546,7 +63545,7 @@
                   "span",
                   null,
                   ke.createElement(ps, { className: "icon", symbol: qo }),
-                  "Git config"
+                  "Git 配置"
                 ),
                 e &&
                   ke.createElement(
@@ -64315,8 +64314,8 @@
         };
         get toggleCoAuthorsText() {
           return this.props.showCoAuthoredBy
-            ? "Remove co-authors"
-            : "Add co-authors";
+            ? "移除协作者"
+            : "添加协作者";
         }
         getAddRemoveCoAuthorsMenuItem() {
           return {
@@ -80389,9 +80388,9 @@
               const { branches: t, formState: n } = e;
               return t.some((e) => !e.isDesktopForkRemoteBranch)
                 ? n.kind === et.History
-                  ? "Select branch to compare…"
+                  ? "选择要比较的分支"
                   : void 0
-                : "No branches to compare";
+                : "没有要比较的分支";
             })(this.props.compareState);
           return ke.createElement(
             "div",
