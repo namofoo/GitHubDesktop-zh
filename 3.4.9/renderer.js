@@ -69882,7 +69882,7 @@
               duration: r,
             }
           : r < eI
-          ? { absoluteText: s, relativeText: "just now", duration: eI - r }
+          ? { absoluteText: s, relativeText: "刚才", duration: eI - r }
           : r < tI
           ? { absoluteText: s, relativeText: i, duration: eI }
           : r < nI
@@ -71245,8 +71245,8 @@
           switch (e) {
             case AI.Fetch:
               return {
-                title: `Fetch ${t}`,
-                description: `Fetch the latest changes from ${t}`,
+                title: `拉取 ${t}`,
+                description: `拉取最新的更改 ${t}`,
                 action: this.props.fetch,
                 icon: zu,
               };
@@ -71264,7 +71264,7 @@
                     " A force push will rewrite history on the remote. Any collaborators working on this branch will need to reset their own local branch to match the history of the remote."
                   );
               return {
-                title: `Force push ${t}`,
+                title: `推送 ${t}`,
                 description: Re().createElement(
                   Re().Fragment,
                   null,
@@ -71338,7 +71338,7 @@
           ? ke.createElement(
               "span",
               null,
-              "Last fetched ",
+              "上次拉取 ",
               ke.createElement(sI, { date: e })
             )
           : "Never fetched";
@@ -71521,7 +71521,7 @@
           return ke.createElement(SI, {
             ...this.defaultButtonProps(),
             title: e.title,
-            description: e.description || "Hang on…",
+            description: e.description || "请稍等,正在使出吃奶的劲…",
             progressValue: e.value,
             icon: zu,
             iconClassName: t ? "spin" : "",
@@ -76773,7 +76773,7 @@
             u,
             h,
             p = Vo,
-            d = "Current branch",
+            d = "当前分支",
             m = !0,
             f = !1;
           if (
@@ -77723,17 +77723,17 @@
           const t = ke.createElement(
             ke.Fragment,
             null,
-            "Select your editor in",
+            "选择您的编辑器",
             " ",
             ke.createElement(
               cD,
               { onClick: this.openIntegrationPreferences },
-              "Options"
+              "选项"
             )
           );
           return this.renderMenuBackedAction(
             e,
-            "Open the repository in your external editor",
+            "在外部编辑器中打开仓库",
             t,
             this.onOpenInExternalEditorClicked
           );
@@ -78071,11 +78071,11 @@
                 ke.createElement(
                   "div",
                   { className: "text" },
-                  ke.createElement("h1", null, "No local changes"),
+                  ke.createElement("h1", null, "无本地更改"),
                   ke.createElement(
                     "p",
                     null,
-                    "There are no uncommitted changes in this repository. Here are some friendly suggestions for what to do next."
+                    "此仓库中没有未提交的更改,这里有一些友好的建议,下一步做什么."
                   )
                 ),
                 ke.createElement("img", {
@@ -81379,13 +81379,13 @@
             ke.createElement(
               "span",
               { className: "with-indicator", id: "changes-tab" },
-              ke.createElement("span", null, "Changes"),
+              ke.createElement("span", null, "变更"),
               this.renderChangesBadge()
             ),
             ke.createElement(
               "div",
               { className: "with-indicator", id: "history-tab" },
-              ke.createElement("span", null, "History")
+              ke.createElement("span", null, "历史")
             )
           );
         }
@@ -97740,7 +97740,7 @@
           return ke.createElement(EI, {
             icon: n,
             title: r,
-            description: "Current repository",
+            description: "当前仓库",
             tooltip: o,
             foldoutStyle: l,
             onContextMenu: this.onRepositoryToolbarButtonContextMenu,
@@ -105376,7 +105376,7 @@
                 void 0 === n
                   ? await r.fetch(o, a)
                   : await r.fetchRemotes(n, o, a);
-                const l = "Refreshing repository";
+                const l = "正在刷新仓库";
                 this.updatePushPullFetchProgress(e, {
                   kind: "generic",
                   title: l,
