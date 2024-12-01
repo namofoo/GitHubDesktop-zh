@@ -8116,7 +8116,7 @@
                     accelerator: "CmdOrCtrl+B",
                     click: Oe("show-branches")
                 }, p, {
-                    label: "Go to &Summary",
+                    label: "转到摘要(&S)",
                     id: "go-to-commit-message",
                     accelerator: "CmdOrCtrl+G",
                     click: Oe("go-to-commit-message")
@@ -8271,7 +8271,7 @@
                 accelerator: "CmdOrCtrl+Shift+H",
                 click: Oe("squash-and-merge-branch")
             }, {
-                label: "R&ebase current branch…",
+                label: "重新定位当前分支(&E)…",
                 id: "rebase-branch",
                 accelerator: "CmdOrCtrl+Shift+E",
                 click: Oe("rebase-branch")
