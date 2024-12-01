@@ -8200,7 +8200,7 @@
                     accelerator: "CmdOrCtrl+Shift+G",
                     click: Oe("view-repository-on-github")
                 }, {
-                    label: `O&pen in ${t??"shell"}`,
+                    label: `使用 ${t??"shell"} 打开(&O)`,
                     id: "open-in-shell",
                     accelerator: "Ctrl+`",
                     click: Oe("open-in-shell")
@@ -8210,7 +8210,7 @@
                     accelerator: "CmdOrCtrl+Shift+F",
                     click: Oe("open-working-directory")
                 }, {
-                    label: `&Open in ${e??"external editor"}`,
+                    label: `使用 ${e??"external editor"} 打开(&O)`,
                     id: "open-external-editor",
                     accelerator: "CmdOrCtrl+Shift+A",
                     click: Oe("open-external-editor")
