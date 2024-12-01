@@ -39733,7 +39733,7 @@
                   };
                   if (n) {
                     const remoteName = t.name === 'origin' ? '远程仓库' : t.name;
-                    const e = `获取 ${remoteName}`,
+                    const e = `同步 ${remoteName}`,
                       i = "fetch";
                     (s = await dg(
                       { ...s, trackLFSProgress: !0, isBackgroundTask: r },
@@ -71583,7 +71583,7 @@
           });
         }
         fetchButton(e, t, n) {
-          const r = `获取 ${e}`;
+          const r = `同步 ${e}`;
           return ke.createElement(SI, {
             ...this.defaultButtonProps(),
             title: r,
