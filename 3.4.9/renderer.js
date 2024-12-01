@@ -31451,7 +31451,7 @@
             Ku,
             {
               className: "change-indicator-wrapper",
-              tooltip: "There are uncommitted changes in this repository",
+              tooltip: "此仓库中有未提交的更改",
             },
             ke.createElement(ps, { symbol: zi })
           ),
@@ -31622,21 +31622,21 @@
           const { repository: t } = e,
             n = t instanceof Lr && t.missing,
             r = t instanceof Lr && null != t.gitHubRepository,
-            s = e.externalEditorLabel ? `Open in ${e.externalEditorLabel}` : ph,
-            i = e.shellLabel ? `Open in ${e.shellLabel}` : "Open in shell";
+            s = e.externalEditorLabel ? `使用 ${e.externalEditorLabel} 打开` : ph,
+            i = e.shellLabel ? `使用 ${e.shellLabel} 打开` : "Open in shell";
           return [
             ...wh(e),
             {
-              label: "Copy repo name",
+              label: "复制仓库名称",
               action: () => m.clipboard.writeText(t.name),
             },
             {
-              label: "Copy repo path",
+              label: "复制仓库路径",
               action: () => m.clipboard.writeText(t.path),
             },
             { type: "separator" },
             {
-              label: "View on GitHub",
+              label: "在 GitHub 上查看",
               action: () => e.onViewOnGitHub(t),
               enabled: r,
             },
@@ -31650,8 +31650,8 @@
             { type: "separator" },
             {
               label: e.askForConfirmationOnRemoveRepository
-                ? "Remove…"
-                : "Remove",
+                ? "移除"
+                : "移除",
               action: () => e.onRemoveRepository(t),
             },
           ];
@@ -31661,7 +31661,7 @@
           if (!(t instanceof Lr)) return [];
           const n = [
             {
-              label: (null == t.alias ? "Create" : "Change") + " alias",
+              label: (null == t.alias ? "创建" : "Change") + "别名",
               action: () => e.onChangeRepositoryAlias(t),
             },
           ];
@@ -69703,13 +69703,13 @@
               isCommitting: n,
             } = this.props,
             { files: r } = e,
-            s = 1 === r.length ? "file" : "files",
-            i = `${r.length} changed ${s}`,
+            s = 1 === r.length ? "文件" : "files",
+            i = `${r.length} 个已更改的${s}`,
             o = r.filter(
               (e) => e.selection.getSelectionType() !== Au.None
             ).length,
-            a = 1 === r.length ? "file" : "files",
-            l = `${o}/${r.length} changed ${a} included`,
+            a = 1 === r.length ? "文件" : "files",
+            l = `${o}/${r.length} 已更改的${a}包含在内`,
             c = KP(e, t),
             u = 0 === r.length || n || null !== t;
           return ke.createElement(
@@ -70286,7 +70286,7 @@
         onHideWhitespaceChangesChanged = (e) =>
           this.props.onHideWhitespaceChangesChanged(e.currentTarget.checked);
         render() {
-          const e = "Diff Options";
+          const e = "差异选项";
           return ke.createElement(
             "div",
             { className: "diff-options-component", ref: this.diffOptionsRef },
@@ -70330,7 +70330,7 @@
             ke.createElement(
               "h3",
               { id: "diff-options-popover-header" },
-              "Diff Options"
+              "差异选项"
             ),
             this.renderHideWhitespaceChanges(),
             this.renderShowSideBySide()
@@ -70346,11 +70346,11 @@
           return ke.createElement(
             "fieldset",
             { role: "radiogroup" },
-            ke.createElement("legend", null, "Diff display"),
+            ke.createElement("legend", null, "差异对比"),
             ke.createElement(YD, {
               value: "Unified",
               checked: !this.props.showSideBySideDiff,
-              label: "Unified",
+              label: "单列",
               onSelected: this.onUnifiedSelected,
             }),
             ke.createElement(YD, {
@@ -70359,7 +70359,7 @@
               label: ke.createElement(
                 ke.Fragment,
                 null,
-                ke.createElement("div", null, "Split")
+                ke.createElement("div", null, "双列")
               ),
               onSelected: this.onSideBySideSelected,
             })
@@ -70369,17 +70369,17 @@
           return ke.createElement(
             "fieldset",
             null,
-            ke.createElement("legend", null, "Whitespace"),
+            ke.createElement("legend", null, "空格"),
             ke.createElement(_T, {
               value: this.props.hideWhitespaceChanges ? IT.On : IT.Off,
               onChange: this.onHideWhitespaceChangesChanged,
-              label: "Hide whitespace changes",
+              label: "隐藏空白更改",
             }),
             this.props.isInteractiveDiff &&
               ke.createElement(
                 "p",
                 { className: "secondary-text" },
-                "Interacting with individual lines or hunks will be disabled while hiding whitespace."
+                "隐藏空白时,与个别行或块的交互将被禁用."
               )
           );
         }
@@ -71799,13 +71799,13 @@
           i = new Array();
         return (
           void 0 !== r &&
-            i.push({ label: "Rename…", action: () => r(t), enabled: n }),
+            i.push({ label: "重命名", action: () => r(t), enabled: n }),
           i.push({
-            label: "Copy branch name",
+            label: "复制分支名称",
             action: () => m.clipboard.writeText(t),
           }),
           i.push({ type: "separator" }),
-          void 0 !== s && i.push({ label: "Delete…", action: () => s(t) }),
+          void 0 !== s && i.push({ label: "删除", action: () => s(t) }),
           i
         );
       }
@@ -81980,7 +81980,7 @@
             PD,
             {
               id: "rename-branch",
-              title: "Rename branch",
+              title: "重命名分支",
               onDismissed: this.props.onDismissed,
               onSubmit: this.renameBranch,
               focusCloseButtonOnOpen: !0,
@@ -81996,14 +81996,14 @@
                     ke.createElement(
                       "p",
                       null,
-                      "This branch is tracking ",
+                      "该分支正在跟踪 ",
                       ke.createElement(qD, null, e.upstream),
-                      " and renaming this branch will not change the branch name on the remote."
+                      " 重命名该分支不会更改远程上的分支名称."
                     )
                   )
                 : null,
               ke.createElement(zO, {
-                label: "Name",
+                label: "名称",
                 initialValue: this.props.branch.name,
                 onValueChange: this.onNameChange,
               })
@@ -82012,7 +82012,7 @@
               _D,
               null,
               ke.createElement(ND, {
-                okButtonText: `Rename ${this.props.branch.name}`,
+                okButtonText: `重命名 ${this.props.branch.name}`,
                 okButtonDisabled: 0 === this.state.newName.length,
               })
             )
@@ -88275,7 +88275,7 @@
             fT,
             { className: "update-status" },
             ke.createElement(Qx, null),
-            ke.createElement("span", null, "Checking for updates…")
+            ke.createElement("span", null, "正在检查更新…")
           );
         }
         renderUpdateAvailable() {
@@ -88283,7 +88283,7 @@
             fT,
             { className: "update-status" },
             ke.createElement(Qx, null),
-            ke.createElement("span", null, "Downloading update…")
+            ke.createElement("span", null, "正在下载更新…")
           );
         }
         renderUpdateNotAvailable() {
@@ -88292,7 +88292,7 @@
             ? ke.createElement(
                 "p",
                 { className: "update-status" },
-                "您拥有最新版本 (last checked",
+                "您拥有最新版本 (上次检查",
                 " ",
                 ke.createElement(sI, { date: e }),
                 ")"
@@ -88353,12 +88353,12 @@
             ke.createElement(
               "p",
               { className: "no-padding" },
-              "Looking for the latest features?"
+              "寻找最新功能？"
             ),
             ke.createElement(
               "p",
               { className: "no-padding" },
-              "Check out the",
+              "查看",
               " ",
               ke.createElement(
                 cD,
@@ -88428,7 +88428,7 @@
                 ke.createElement(
                   cD,
                   { onClick: this.props.onShowAcknowledgements },
-                  "License and Open Source Notices"
+                  "许可和开源声明"
                 )
               ),
               this.renderUpdateDetails(),
@@ -88970,7 +88970,7 @@
               ke.createElement(
                 "header",
                 null,
-                ke.createElement("h1", null, "让我们开始吧!"),
+                ke.createElement("h1", null, "让我们开始吧!🍥🍥🍥"),
                 ke.createElement(
                   "p",
                   null,
@@ -91408,12 +91408,12 @@
         }
         render() {
           const e = this.props.repository,
-            t = null === e.alias ? "Create" : "Change";
+            t = null === e.alias ? "创建" : "Change";
           return ke.createElement(
             PD,
             {
               id: "change-repository-alias",
-              title: `${t} repository alias`,
+              title: `${t}仓库别名`,
               ariaDescribedBy: "change-repository-alias-description",
               onDismissed: this.props.onDismissed,
               onSubmit: this.changeAlias,
@@ -91424,7 +91424,7 @@
               ke.createElement(
                 "p",
                 { id: "change-repository-alias-description" },
-                'Choose a new alias for the repository "',
+                '为仓库选择新的别名 "',
                 Hr(e),
                 '".',
                 " "
@@ -91442,14 +91442,14 @@
                 ke.createElement(
                   "p",
                   { className: "description" },
-                  "This will not affect the original repository name on GitHub."
+                  "这不会影响 GitHub 上原始仓库的名称."
                 )
             ),
             ke.createElement(
               _D,
               null,
               ke.createElement(ND, {
-                okButtonText: `${t} alias`,
+                okButtonText: `${t}别名`,
                 okButtonDisabled: 0 === this.state.newAlias.length,
               })
             )

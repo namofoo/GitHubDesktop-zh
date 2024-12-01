@@ -8271,7 +8271,7 @@
                 accelerator: "CmdOrCtrl+Shift+H",
                 click: Oe("squash-and-merge-branch")
             }, {
-                label: "重新定位当前分支(&E)…",
+                label: "定位当前分支(&E)",
                 id: "rebase-branch",
                 accelerator: "CmdOrCtrl+Shift+E",
                 click: Oe("rebase-branch")
