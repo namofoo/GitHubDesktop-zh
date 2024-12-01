@@ -31609,12 +31609,12 @@
           (e.TestIcons = "TestIcons");
       })(lh || (lh = {}));
       const ch = [".cmd", ".exe", ".bat", ".sh"],
-        uh = "Copy file path",
-        hh = "Copy relative file path",
+        uh = "复制文件路径",
+        hh = "复制相对文件路径",
         ph = "Open in external editor",
-        dh = "Show in Explorer",
+        dh = "在资源管理器中显示",
         mh = "Recycle Bin",
-        fh = "Open with default program";
+        fh = "使用默认程序打开";
       function gh(e) {
         return -1 === ch.indexOf(e.toLowerCase());
       }
@@ -63539,7 +63539,7 @@
                   "span",
                   null,
                   ke.createElement(ps, { className: "icon", symbol: bo }),
-                  "Ignored files"
+                  "忽略文件"
                 ),
                 ke.createElement(
                   "span",
@@ -63565,7 +63565,7 @@
               _D,
               null,
               ke.createElement(ND, {
-                okButtonText: "Save",
+                okButtonText: "保存",
                 okButtonDisabled: this.state.saveDisabled,
               })
             )
@@ -69331,7 +69331,7 @@
         getDiscardChangesMenuItemLabel = (e) => {
           const t =
             1 === e.length
-              ? "Discard changes"
+              ? "放弃更改"
               : `Discard ${e.length} selected changes`;
           return this.props.askForConfirmationOnDiscardChanges ? `${t}…` : t;
         };
@@ -69423,7 +69423,7 @@
           if (1 === c.length) {
             const e = t.basename(r) !== jP;
             p.push({
-              label: "Ignore file (add to .gitignore)",
+              label: "忽略文件（添加到 .gitignore）",
               action: () => this.props.onIgnoreFile(r),
               enabled: e,
             });
@@ -69434,7 +69434,7 @@
                 return { label: r, action: () => this.props.onIgnoreFile(r) };
               });
               p.push({
-                label: "Ignore folder (add to .gitignore)",
+                label: "忽略文件夹（添加到 .gitignore）",
                 submenu: t,
                 enabled: e,
               });
@@ -69454,7 +69454,7 @@
             .slice(0, 5)
             .forEach((e) => {
               p.push({
-                label: `Ignore all ${e} files (add to .gitignore)`,
+                label: `忽略全部 ${e} 文件（添加到 .gitignore）`,
                 action: () => this.props.onIgnorePattern(`*${e}`),
               });
             }),
@@ -71337,7 +71337,7 @@
           ? ke.createElement(
               "span",
               null,
-              "拉取请求 ",
+              "拉取 ",
               ke.createElement(sI, { date: e })
             )
           : "Never fetched";
@@ -78931,7 +78931,7 @@
               enabled: a && void 0 !== this.props.onCheckoutCommit,
             }),
             u.push({
-              label: "Reorder commit",
+              label: "重新排序提交",
               action: () => {
                 this.props.onKeyboardReorder?.([t]);
               },
@@ -78969,7 +78969,7 @@
                 enabled: this.canCherryPick(),
               },
               { type: "separator" },
-              { label: "复制 SHA", action: () => m.clipboard.writeText(t.sha) },
+              { label: "复制SHA", action: () => m.clipboard.writeText(t.sha) },
               {
                 label: p,
                 action: () => m.clipboard.writeText(t.tags.join(" ")),
@@ -79471,7 +79471,7 @@
             ke.createElement(ps, { symbol: qo }),
             ke.createElement("div", { className: "ref selectable" }, t ? r : n),
             ke.createElement(BP, {
-              ariaLabel: "Copy the full SHA",
+              ariaLabel: "复制完整SHA",
               copyContent: r,
             })
           );
@@ -90890,7 +90890,7 @@
             PD,
             {
               id: "create-tag",
-              title: "Create a tag",
+              title: "创建标签",
               onSubmit: this.createTag,
               onDismissed: this.props.onDismissed,
               loading: this.state.isCreatingTag,
@@ -90901,7 +90901,7 @@
               AD,
               null,
               ke.createElement(zO, {
-                label: "Name",
+                label: "名称",
                 initialValue: this.props.initialName,
                 onValueChange: this.updateTagName,
               }),
@@ -90911,7 +90911,7 @@
               _D,
               null,
               ke.createElement(ND, {
-                okButtonText: "Create tag",
+                okButtonText: "创建标签",
                 okButtonDisabled: t,
               })
             )
@@ -92194,7 +92194,7 @@
         }
         render() {
           const { operation: e, onDismissed: t } = this.props,
-            n = `${e} will require force push`;
+            n = `${e} 将需要强制推送`;
           return ke.createElement(
             PD,
             {
@@ -92213,7 +92213,7 @@
               ke.createElement(
                 "p",
                 { id: "warn-force-push-confirmation-title" },
-                "Are you sure you want to ",
+                "您确定要 ",
                 e.toLowerCase(),
                 "?"
               ),
@@ -92222,13 +92222,13 @@
                 { id: "warn-force-push-confirmation-message" },
                 "At the end of the ",
                 e.toLowerCase(),
-                " flow, GitHub Desktop will enable you to force push the branch to update the upstream branch. Force pushing will alter the history on the remote and potentially cause problems for others collaborating on this branch."
+                " flow, GitHub Desktop 将允许您强制推送分支以更新上游分支.强制推送将更改远程上的历史记录,并可能给在此分支上协作的其他人带来问题."
               ),
               ke.createElement(
                 "div",
                 null,
                 ke.createElement(_T, {
-                  label: "Do not show this message again",
+                  label: "不再显示此消息",
                   value: this.state.askForConfirmationOnForcePush
                     ? IT.Off
                     : IT.On,
@@ -92240,7 +92240,7 @@
               _D,
               null,
               ke.createElement(ND, {
-                okButtonText: `Begin ${e.toLowerCase()}`,
+                okButtonText: `开始 ${e.toLowerCase()}`,
                 onCancelButtonClick: this.props.onDismissed,
               })
             )
