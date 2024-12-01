@@ -71242,11 +71242,12 @@
         };
         getDropdownItemWithType(e) {
           const { remoteName: t } = this.props;
+          const translatedRemoteName = t === 'origin' ? '远程仓库' : t;
           switch (e) {
             case AI.Fetch:
               return {
-                title: `拉取 ${t}`,
-                description: `拉取最新的更改 ${t}`,
+                title: `拉取 ${translatedRemoteName}`,
+                description: `拉取最新的更改 ${translatedRemoteName}`,
                 action: this.props.fetch,
                 icon: zu,
               };
@@ -71264,7 +71265,7 @@
                     " A force push will rewrite history on the remote. Any collaborators working on this branch will need to reset their own local branch to match the history of the remote."
                   );
               return {
-                title: `推送 ${t}`,
+                title: `推送 ${translatedRemoteName}`,
                 description: Re().createElement(
                   Re().Fragment,
                   null,
@@ -71341,7 +71342,7 @@
               "拉取 ",
               ke.createElement(sI, { date: e })
             )
-          : "Never fetched";
+          : "从未获取";
       }
       !(function (e) {
         (e.Fetch = "fetch"), (e.ForcePush = "force-push");
@@ -71518,7 +71519,7 @@
             ? this.forcePushButton(s, n, r, l, this.forcePushWithLease)
             : p > 0
             ? this.pullButton(s, n, r, l, c || !1, u, this.pull)
-            : this.pushButton(s, n, r, l, this.push);
+            : this.pushButton(translatedRemoteName, n, r, l, this.push);
         }
         progressButton(e, t) {
           return ke.createElement(SI, {
@@ -104886,8 +104887,9 @@
               return this.withPushPullFetch(e, async () => {
                 const n = this.getBranchToPush(e, t);
                 if (void 0 === n) return;
-                const s = n.upstreamRemoteName || r.name,
-                  i = `推送到 ${s}`;
+                const s = n.upstreamRemoteName || r.name;
+                const displayRemoteName = s === 'origin' ? '远程仓库' : s;
+                  i = `推送到 ${displayRemoteName}`;
                 this.updatePushPullFetchProgress(e, {
                   kind: "push",
                   title: i,
