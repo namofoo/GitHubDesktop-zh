@@ -40794,7 +40794,7 @@
                   ? 1 / 0
                   : Date.now() - this.lastRefreshStartedAt,
               t = Math.max(9e5 - e, 0) + gb,
-              n = isFinite(e) ? `${(e / 1e3).toFixed(3)}s 前` : "never",
+              n = isFinite(e) ? `${(e / 1e3).toFixed(3)}s ago` : "never",
               r = `${(t / 1e3).toFixed(3)}s`;
             log.debug(
               `[RepositoryIndicatorUpdater] Last refresh: ${n}, scheduling in ${r}`
@@ -62345,7 +62345,7 @@
             _D,
             null,
             ke.createElement(ND, {
-              okButtonText: this.props.buttonText || "Close",
+              okButtonText: this.props.buttonText || "关闭",
               okButtonTitle: this.props.buttonTitle,
               onOkButtonClick: this.props.onButtonClick,
               okButtonDisabled: this.props.disabled,
@@ -67396,9 +67396,9 @@
               return Re().createElement(
                 Re().Fragment,
                 null,
-                "This diff contains a change in line endings from '",
+                "此差异包含行尾的更改 '",
                 t.from,
-                "' to '",
+                "' 到 '",
                 t.to,
                 "'."
               );
@@ -68116,8 +68116,8 @@
           )
             return;
           const n = [
-              { label: "Copy", role: t > 0 ? "copy" : void 0, enabled: t > 0 },
-              { label: "Select all", action: () => this.onSelectAll() },
+              { label: "复制", role: t > 0 ? "copy" : void 0, enabled: t > 0 },
+              { label: "选择全部", action: () => this.onSelectAll() },
             ],
             r = this.buildExpandMenuItem();
           null !== r && n.push({ type: "separator" }, r), oh(n);
@@ -69981,7 +69981,7 @@
                   onClick: this.props.onUndo,
                   tooltip: t,
                 },
-                "Undo"
+                "撤消"
               )
             )
           );
@@ -78899,13 +78899,13 @@
             i = e > 0 && e <= this.props.localCommitSHAs.length,
             o = !0 === this.props.canResetToCommits && i,
             a = e > 0;
-          let l = "View on GitHub";
+          let l = "在 GitHub 上查看";
           const c = this.props.gitHubRepository;
           c && c.endpoint !== er() && (l = "View on GitHub Enterprise");
           const u = [];
           s &&
             u.push({
-              label: "Amend commit…",
+              label: "修改提交",
               action: () => this.props.onAmendCommit?.(t, n),
             }),
             r &&
@@ -78917,7 +78917,7 @@
                 enabled: void 0 !== this.props.onUndoCommit,
               }),
             u.push({
-              label: "Reset to commit…",
+              label: "重置以提交",
               action: () => {
                 this.props.onResetToCommit && this.props.onResetToCommit(t);
               },
@@ -78939,7 +78939,7 @@
             }),
             u.push(
               {
-                label: "Revert changes in commit",
+                label: "恢复提交中的更改",
                 action: () => {
                   this.props.onRevertCommit && this.props.onRevertCommit(t);
                 },
@@ -78947,20 +78947,20 @@
               },
               { type: "separator" },
               {
-                label: "Create branch from commit",
+                label: "从提交创建分支",
                 action: () => {
                   this.props.onCreateBranch && this.props.onCreateBranch(t);
                 },
               },
               {
-                label: "Create Tag…",
+                label: "创建标签",
                 action: () => this.props.onCreateTag?.(t.sha),
                 enabled: void 0 !== this.props.onCreateTag,
               }
             );
           const h = this.getDeleteTagsMenuItem(t);
           null !== h && u.push({ type: "separator" }, h), t.tags.length;
-          const p = t.tags.length > 1 ? "Copy tags" : "Copy tag";
+          const p = t.tags.length > 1 ? "Copy tags" : "复制标签";
           return (
             u.push(
               {
@@ -78969,7 +78969,7 @@
                 enabled: this.canCherryPick(),
               },
               { type: "separator" },
-              { label: "Copy SHA", action: () => m.clipboard.writeText(t.sha) },
+              { label: "复制 SHA", action: () => m.clipboard.writeText(t.sha) },
               {
                 label: p,
                 action: () => m.clipboard.writeText(t.tags.join(" ")),
@@ -104883,7 +104883,7 @@
                 const n = this.getBranchToPush(e, t);
                 if (void 0 === n) return;
                 const s = n.upstreamRemoteName || r.name,
-                  i = `Pushing to ${s}`;
+                  i = `推送到 ${s}`;
                 this.updatePushPullFetchProgress(e, {
                   kind: "push",
                   title: i,
