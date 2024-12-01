@@ -58278,7 +58278,7 @@
               onClick: this.onNewRepositoryButtonClick,
               ariaExpanded: this.state.newRepositoryMenuExpanded,
             },
-            "Add",
+            "添加",
             ke.createElement(ps, { symbol: zc })
           );
         renderNoItems = () =>
@@ -58325,13 +58325,13 @@
           );
         onNewRepositoryButtonClick = () => {
           const e = [
-            { label: "Clone repository…", action: this.onCloneRepository },
+            { label: "克隆仓库", action: this.onCloneRepository },
             {
-              label: "Create new repository…",
+              label: "创建仓库",
               action: this.onCreateNewRepository,
             },
             {
-              label: "Add existing repository…",
+              label: "本地仓库",
               action: this.onAddExistingRepository,
             },
           ];
@@ -64849,7 +64849,7 @@
                   !0 !== this.props.showInputLabels
                     ? "Commit description"
                     : void 0,
-                placeholder: "Description",
+                placeholder: "描述",
                 value: this.state.description || "",
                 onValueChanged: this.onDescriptionChanged,
                 autocompletionProviders:
@@ -71942,7 +71942,7 @@
         };
         getGroupLabel(e) {
           return "default" === e
-            ? "Default branch"
+            ? "默认分支"
             : "recent" === e
             ? "Recent branches"
             : "other" === e
@@ -71963,7 +71963,7 @@
                   className: "new-branch-button",
                   onClick: this.onCreateNewBranch,
                 },
-                "New branch"
+                "新建分支"
               )
             : null;
         onItemClick = (e, t) => {
@@ -75672,10 +75672,10 @@
                   {
                     className: "merge-button",
                     onClick: this.onMergeClick,
-                    tooltip: `Choose a branch to merge into ${e.name}`,
+                    tooltip: `选择要合并的分支 ${e.name}`,
                   },
                   ke.createElement(ps, { className: "icon", symbol: zo }),
-                  "Choose a branch to merge into ",
+                  "选择要合并的分支 ",
                   ke.createElement("strong", null, e.name)
                 )
               );
@@ -75699,7 +75699,7 @@
                 ke.createElement(
                   "span",
                   { id: "pull-requests-tab", className: "pull-request-tab" },
-                  "Pull requests",
+                  "拉取请求",
                   this.renderOpenPullRequestsBubble()
                 )
               )
@@ -77682,7 +77682,7 @@
           const e = this.getPlatformFileManagerName();
           return this.renderMenuBackedAction(
             "open-working-directory",
-            `View the files of your repository in ${e}`,
+            `在 ${e} 中查看仓库文件`,
             void 0,
             this.onShowInFileManagerClicked
           );
@@ -77695,7 +77695,7 @@
           return null !== this.props.repository.gitHubRepository
             ? this.renderMenuBackedAction(
                 "view-repository-on-github",
-                "Open the repository page on GitHub in your browser",
+                "在浏览器中打开 GitHub 仓库",
                 void 0,
                 this.onViewOnGitHubClicked
               )
@@ -83702,7 +83702,7 @@
               ke.createElement(
                 cD,
                 { onClick: this.onOpenAccessibilitySettings },
-                "accessibility settings"
+                "辅助功能设置"
               ),
               " ",
               "to control the visibility of the link underlines and diff check marks."
@@ -84617,12 +84617,12 @@
                   "aria-labelledby": "show-confirm-dialog-heading",
                 },
                 ke.createElement(_T, {
-                  label: "Removing repositories",
+                  label: "移除仓库",
                   value: this.state.confirmRepositoryRemoval ? IT.On : IT.Off,
                   onChange: this.onConfirmRepositoryRemovalChanged,
                 }),
                 ke.createElement(_T, {
-                  label: "Discarding changes",
+                  label: "放弃更改",
                   value: this.state.confirmDiscardChanges ? IT.On : IT.Off,
                   onChange: this.onConfirmDiscardChangesChanged,
                 }),
@@ -84649,7 +84649,7 @@
                   onChange: this.onConfirmForcePushChanged,
                 }),
                 ke.createElement(_T, {
-                  label: "Undo commit",
+                  label: "撤销提交",
                   value: this.state.confirmUndoCommit ? IT.On : IT.Off,
                   onChange: this.onConfirmUndoCommitChanged,
                 })
@@ -84691,9 +84691,9 @@
             ke.createElement(
               "div",
               { className: "advanced-section" },
-              ke.createElement("h2", null, "Notifications"),
+              ke.createElement("h2", null, "通知"),
               ke.createElement(_T, {
-                label: "Enable notifications",
+                label: "启用通知",
                 value: this.props.notificationsEnabled ? IT.On : IT.Off,
                 onChange: this.onNotificationsEnabledChanged,
               }),
@@ -84760,7 +84760,7 @@
             s,
             " for GitHub Desktop in the",
             " ",
-            ke.createElement(cD, { uri: r }, "Notifications Settings"),
+            ke.createElement(cD, { uri: r }, "通知设置"),
             "."
           );
         }
@@ -84778,7 +84778,7 @@
               { className: "advanced-section" },
               ke.createElement("h2", null, "Accessibility"),
               ke.createElement(_T, {
-                label: "Underline links",
+                label: "下划线链接",
                 value: this.props.underlineLinks ? IT.On : IT.Off,
                 onChange: this.onUnderlineLinksChanged,
                 ariaDescribedBy: "underline-setting-description",
@@ -84992,7 +84992,7 @@
                   "span",
                   { id: this.getTabId(_r.Accessibility) },
                   ke.createElement(ps, { className: "icon", symbol: ds }),
-                  "可访问性"
+                  "辅助"
                 )
               ),
               this.renderActiveTab()
