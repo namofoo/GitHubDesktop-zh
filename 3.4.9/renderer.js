@@ -104889,7 +104889,7 @@
                 const n = this.getBranchToPush(e, t);
                 if (void 0 === n) return;
                 const s = n.upstreamRemoteName || r.name,
-                  i = `推送到 ${s}`;
+                  i = `正在推送到 ${s}`;
                 this.updatePushPullFetchProgress(e, {
                   kind: "push",
                   title: i,
