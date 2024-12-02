@@ -66897,7 +66897,7 @@
             case Tu.Down:
               return {
                 icon: Uo,
-                title: "Expand Down",
+                title: "向下展开",
                 handler: this.onExpandHunk(e - 1, t),
               };
             case Tu.Short:
