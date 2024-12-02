@@ -71796,7 +71796,7 @@
                 "div",
                 { className: "no-branches" },
                 this.props.noBranchesMessage ??
-                  "Sorry, I can't find that branch"
+                  "抱歉,我找不到该分支"
               );
         }
       }
@@ -79310,7 +79310,7 @@
                 {
                   onClick: t ? this.onCollapse : this.onExpand,
                   className: "expander",
-                  tooltip: t ? "Collapse" : "Expand",
+                  tooltip: t ? "折叠" : "展开",
                   applyTooltipAriaDescribedBy: !1,
                   ariaExpanded: t,
                   ariaLabel: t
@@ -79477,7 +79477,7 @@
             ke.createElement(ps, { symbol: qo }),
             ke.createElement("div", { className: "ref selectable" }, t ? r : n),
             ke.createElement(BP, {
-              ariaLabel: "复制完整SHA",
+              ariaLabel: "复制SHA",
               copyContent: r,
             })
           );
@@ -79569,14 +79569,14 @@
                   "div",
                   { className: "lines-added" },
                   n
-                    ? ke.createElement(ke.Fragment, null, r, " added lines")
+                    ? ke.createElement(ke.Fragment, null, r, " 行添加")
                     : ke.createElement(ke.Fragment, null, "+", r)
                 ),
                 ke.createElement(
                   "div",
                   { className: "lines-deleted" },
                   n
-                    ? ke.createElement(ke.Fragment, null, s, " removed lines")
+                    ? ke.createElement(ke.Fragment, null, s, " 行删除")
                     : ke.createElement(ke.Fragment, null, "-", s)
                 )
               );
@@ -79727,12 +79727,12 @@
         }
         renderFileHeader() {
           const e = this.props.changesetData.files.length,
-            t = 1 === e ? "file" : "files";
+            t = 1 === e ? "文件" : "文件";
           return ke.createElement(
             "div",
             { className: "file-list-header" },
             e,
-            " changed ",
+            " 个已更改的",
             t
           );
         }
@@ -92608,7 +92608,7 @@
                     id: "Squash",
                   },
                   {
-                    label: "变基",
+                    label: "变基(重新整理基线)",
                     description:
                       "所选分支的提交将被重新设定并添加到当前分支.",
                     id: "Rebase",
@@ -92654,12 +92654,12 @@
         };
         getDialogTitle = () => {
           const e = tC(this.props.currentBranch.name, 40),
-            t = "Squash" === this.props.operation ? "Squash and " : null;
+            t = "Squash" === this.props.operation ? "压缩并" : null;
           return Re().createElement(
             Re().Fragment,
             null,
             t,
-            "Merge into ",
+            "合并到 ",
             Re().createElement("strong", null, e)
           );
         };
@@ -93155,7 +93155,7 @@
           return Re().createElement(
             Re().Fragment,
             null,
-            "Rebase ",
+            "变基 ",
             Re().createElement("strong", null, e)
           );
         };
@@ -94692,9 +94692,9 @@
           return ke.createElement(
             CH,
             {
-              contentTitle: "Choose a base branch",
+              contentTitle: "选择基础分支",
               buttonContent: o?.name ?? "",
-              label: "base:",
+              label: "基础:",
               ref: this.popoverRef,
             },
             ke.createElement(BI, {
@@ -94730,11 +94730,11 @@
               onBranchChange: o,
               onDismissed: a,
             } = this.props,
-            l = `${i} commit${i > 1 ? "s" : ""}`;
+            l = `${i} 个提交${i > 1 ? "s" : ""}`;
           return ke.createElement(
             TD,
             {
-              title: "Open a pull request",
+              title: "打开拉取请求",
               titleId: SH,
               onCloseButtonClick: a,
             },
@@ -94742,9 +94742,9 @@
             ke.createElement(
               "div",
               { className: "base-branch-details" },
-              "Merge ",
+              "将 ",
               l,
-              " into",
+              "合并到 ",
               " ",
               ke.createElement(vH, {
                 branch: e,
@@ -94769,7 +94769,7 @@
                 ),
               }),
               " ",
-              "from ",
+              "从 ",
               ke.createElement(qD, null, t.name),
               "."
             )
@@ -95119,7 +95119,7 @@
                   ke.Fragment,
                   null,
                   ke.createElement(qD, null, r.name),
-                  " is up to date with all commits from",
+                  " 包含来自以下所有提交的最新内容",
                   " ",
                   ke.createElement(qD, null, t.name),
                   "."
@@ -95139,7 +95139,7 @@
               "div",
               null,
               ke.createElement(ps, { symbol: Ko }),
-              ke.createElement("h3", null, "There are no changes."),
+              ke.createElement("h3", null, "没有任何变化."),
               o
             )
           );
@@ -95188,7 +95188,7 @@
             ke.createElement(ND, {
               okButtonText: l,
               okButtonTitle: a,
-              cancelButtonText: "Cancel",
+              cancelButtonText: "取消",
               okButtonDisabled: null === s || 0 === s.length,
             })
           );
