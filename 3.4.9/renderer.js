@@ -64420,17 +64420,17 @@
             ? ke.createElement(
                 aD,
                 { icon: oD.Information },
-                "Your changes will modify your ",
-                ke.createElement("strong", null, "most recent commit"),
+                "您的更改将修改",
+                ke.createElement("strong", null, "最近的提交"),
                 ".",
                 " ",
                 ke.createElement(
                   cD,
                   { onClick: this.props.onStopAmending },
-                  "Stop amending"
+                  "停止修改"
                 ),
                 " ",
-                "to make these changes as a new commit."
+                "以使这些更改作为新的提交."
               )
             : null;
         }
@@ -64642,7 +64642,7 @@
           return null !== t
             ? e
               ? "Amending"
-              : "Amend"
+              : "修改"
             : e
             ? "正在提交"
             : "提交";
@@ -64679,7 +64679,7 @@
           return (
             t ||
             (null !== e
-              ? `${this.getButtonVerb()} last commit`
+              ? `${this.getButtonVerb()}最近的提交`
               : this.getCommittingButtonTitle())
           );
         }
@@ -77953,7 +77953,7 @@
               "当有本地提交等待推送或",
               this.renderDiscoverabilityKeyboardShortcut(i)
             ),
-            h = `推送${a.join(" and ")}至${t.name}的远程分支`,
+            h = `推送${a.join(" and ")}至${t.name}远程分支`,
             p = `推送 ${t.name}`;
           return ke.createElement(_P, {
             key: "push-branch-action",
@@ -78713,7 +78713,7 @@
         };
         getUnpushedIndicatorTitle(e, t) {
           return e
-            ? "This commit has not been pushed to the remote repository"
+            ? "此提交尚未推送到远程仓库"
             : t > 0
             ? `This commit has ${t} tag${t > 1 ? "s" : ""} to push`
             : void 0;
@@ -78916,7 +78916,7 @@
             }),
             r &&
               u.push({
-                label: "Undo commit…",
+                label: "撤消提交",
                 action: () => {
                   this.props.onUndoCommit && this.props.onUndoCommit(t);
                 },
