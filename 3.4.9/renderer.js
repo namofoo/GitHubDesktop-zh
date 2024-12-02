@@ -83894,7 +83894,7 @@
             ke.createElement(
               "div",
               { className: "advanced-section" },
-              ke.createElement("h2", null, "使用方式"),
+              ke.createElement("h2", null, "使用方法"),
               ke.createElement(_T, {
                 label: this.reportDesktopUsageLabel(),
                 value: this.state.optOutOfUsageTracking ? IT.Off : IT.On,
@@ -84632,19 +84632,19 @@
                   onChange: this.onConfirmDiscardChangesChanged,
                 }),
                 ke.createElement(_T, {
-                  label: "永久丢弃更改",
+                  label: "丢弃更改",
                   value: this.state.confirmDiscardChangesPermanently
                     ? IT.On
                     : IT.Off,
                   onChange: this.onConfirmDiscardChangesPermanentlyChanged,
                 }),
                 ke.createElement(_T, {
-                  label: "Discarding stash",
+                  label: "丢弃暂存",
                   value: this.state.confirmDiscardStash ? IT.On : IT.Off,
                   onChange: this.onConfirmDiscardStashChanged,
                 }),
                 ke.createElement(_T, {
-                  label: "Checking out a commit",
+                  label: "检查提交",
                   value: this.state.confirmCheckoutCommit ? IT.On : IT.Off,
                   onChange: this.onConfirmCheckoutCommitChanged,
                 }),
