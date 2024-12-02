@@ -8030,7 +8030,7 @@
                 return r.length <= 25 ? e : `${r.slice(0,25).join("")}…`
             }(a);
             const h = i ? "移除(&R)" : "移除(&R)",
-                d = s ? "在 GitHub 上查看拉取请求(&P)" : "创建拉取请求",
+                d = s ? "在 GitHub 上查看并拉取请求(&P)" : "创建拉取请求",
                 f = new Array,
                 p = {
                     type: "separator"

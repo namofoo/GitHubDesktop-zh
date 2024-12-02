@@ -77996,8 +77996,8 @@
               null
             );
           const s = {
-              title: "Create a Pull Request from your current branch",
-              label: "Create Pull Request",
+              title: "从当前分支创建拉取请求",
+              label: "创建拉取请求",
               description: n,
               id: Yd.CreatePullRequest,
               menuItemId: "create-pull-request",
@@ -95172,7 +95172,7 @@
             } = this.props,
             { mergeStatus: r, commitSHAs: s } = t,
             i = n.gitHubRepository,
-            o = e ? "View" : " Create",
+            o = e ? "查看" : " 创建",
             a = `${o} pull request on GitHub${
               i && i.endpoint !== er() ? " Enterprise" : ""
             }.`,
@@ -95180,7 +95180,7 @@
               ke.Fragment,
               null,
               e && ke.createElement(ps, { symbol: Pa }),
-              `${o} pull request`
+              `${o}拉取请求`
             );
           return ke.createElement(
             _D,
