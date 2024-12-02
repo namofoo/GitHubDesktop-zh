@@ -64644,7 +64644,7 @@
               ? "Amending"
               : "Amend"
             : e
-            ? "Committing"
+            ? "正在提交"
             : "提交";
         }
         getCommittingButtonText() {
