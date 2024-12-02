@@ -78006,14 +78006,14 @@
               onClick: this.onCreatePullRequestClicked,
             },
             i = {
-              title: "Preview the Pull Request from your current branch",
-              label: "Preview Pull Request",
+              title: "预览当前分支的拉取请求",
+              label: "预览拉取请求",
               description: ke.createElement(
                 ke.Fragment,
                 null,
-                "The current branch (",
+                "当前分支 (",
                 ke.createElement(qD, null, e.branch.name),
-                ") is already published to GitHub. Preview the changes this pull request will have before proposing your changes."
+                ") 已发布到 GitHub.在提出更改之前,请预览此拉取请求将带来的更改."
               ),
               id: Yd.PreviewPullRequest,
               menuItemId: "preview-pull-request",
@@ -83792,7 +83792,7 @@
                 ke.createElement(
                   "div",
                   null,
-                  "Sign in to your GitHub.com account to access your repositories."
+                  "登录您的 GitHub.com 帐户以访问您的仓库."
                 )
               );
             case NL.Enterprise:
@@ -87654,11 +87654,11 @@
         getHeaderText = () =>
           void 0 !== this.props.headerText
             ? this.props.headerText
-            : "创建分支";
+            : "新建分支";
         getOkButtonText = () =>
           void 0 !== this.props.okButtonText
             ? this.props.okButtonText
-            : "创建分支";
+            : "新建分支";
         onBranchNameChange = (e) => {
           this.updateBranchName(e);
         };
@@ -87792,7 +87792,7 @@
             return ke.createElement(
               "div",
               null,
-              "Your new branch will be based on your currently checked out branch (",
+              "您的新分支将基于当前的分支 (",
               ke.createElement(qD, null, e),
               ")",
               this.renderForkLinkSuffix(),
@@ -87803,9 +87803,9 @@
                   ke.Fragment,
                   null,
                   ke.createElement(qD, null, e),
-                  " is the ",
+                  " 是 ",
                   PB,
-                  " for your repository."
+                  " 作为您的仓库."
                 )
             );
           {
@@ -87929,7 +87929,7 @@
       const PB = ke.createElement(
         cD,
         { uri: "https://help.github.com/articles/setting-the-default-branch/" },
-        "default branch"
+        "默认分支"
       );
       function IB(e, t) {
         return e === Zp.UpstreamDefaultBranch
@@ -87941,7 +87941,7 @@
       const _B = ke.createElement(
         "p",
         null,
-        "Your browser will redirect you back to GitHub Desktop once you've signed in. If your browser asks for your permission to launch GitHub Desktop, please allow it."
+        "登录后,浏览器会将您重定向回 GitHub Desktop.如果浏览器请求您允许启动 GitHub Desktop,请允许."
       );
       class NB extends ke.Component {
         dialogRef = ke.createRef();
@@ -87996,11 +87996,11 @@
           const r = e.kind;
           switch (e.kind) {
             case RA.EndpointEntry:
-              (n = 0 === this.state.endpoint.length), (t = "Continue");
+              (n = 0 === this.state.endpoint.length), (t = "继续");
               break;
             case RA.ExistingAccountWarning:
             case RA.Authentication:
-              t = "Continue with browser";
+              t = "使用浏览器继续";
               break;
             default:
               return ot(0, `Unknown sign in step ${r}`);
@@ -88041,7 +88041,7 @@
               fT,
               null,
               ke.createElement(mT, {
-                label: "Enterprise address",
+                label: "企业地址",
                 value: this.state.endpoint,
                 onValueChanged: this.onEndpointChanged,
                 placeholder: "https://github.example.com",
@@ -88088,8 +88088,8 @@
             n = e.error ? ke.createElement(ID, null, e.error.message) : null,
             r =
               this.props.signInState.kind === RA.Authentication
-                ? "Sign in using your browser"
-                : "Sign in";
+                ? "使用浏览器登录"
+                : "登录";
           return ke.createElement(
             PD,
             {
@@ -89231,7 +89231,7 @@
               id: "confirm-remove-repository",
               key: "remove-repository-confirmation",
               type: "warning",
-              title: "Remove repository",
+              title: "移除仓库",
               dismissDisabled: e,
               loading: e,
               disabled: e,
@@ -89244,9 +89244,9 @@
               ke.createElement(
                 "p",
                 null,
-                'Are you sure you want to remove the repository "',
+                '您确定要移除仓库 "',
                 this.props.repository.name,
-                '" from GitHub Desktop?'
+                '" 从 GitHub Desktop?'
               ),
               ke.createElement(
                 "div",
@@ -89254,7 +89254,7 @@
                 ke.createElement(
                   "p",
                   null,
-                  "The repository will be removed from GitHub Desktop:"
+                  "该仓库将从 GitHub Desktop 中移除:"
                 ),
                 ke.createElement(
                   "p",
@@ -89266,7 +89266,7 @@
                 "div",
                 null,
                 ke.createElement(_T, {
-                  label: "Also move this repository to " + mh,
+                  label: "同时将此仓库移至 " + mh,
                   value: this.state.deleteRepoFromDisk ? IT.On : IT.Off,
                   onChange: this.onConfirmRepositoryDeletion,
                 })
@@ -89275,7 +89275,7 @@
             ke.createElement(
               _D,
               null,
-              ke.createElement(ND, { destructive: !0, okButtonText: "Remove" })
+              ke.createElement(ND, { destructive: !0, okButtonText: "移除" })
             )
           );
         }
