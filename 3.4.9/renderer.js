@@ -78859,7 +78859,7 @@
               "使用 ",
               ke.createElement(Cu, { darwinKeys: ["↑"], keys: ["↑"] }),
               ke.createElement(Cu, { darwinKeys: ["↓"], keys: ["↓"] }),
-              " 选择一个新位置。."
+              " 选择一个新位置."
             ),
             ke.createElement(
               "p",
@@ -87522,11 +87522,11 @@
             return ke.createElement(
               "p",
               null,
-              "Your new branch will be based on the commit '",
+              "您的新分支将基于提交 '",
               n.summary,
               "' (",
               n.sha.substring(0, 7),
-              ") from your repository."
+              ") 来自你的仓库."
             );
           if (e.kind === Nr.Detached)
             return ke.createElement(
@@ -87613,7 +87613,7 @@
               AD,
               null,
               ke.createElement(zO, {
-                label: "Name",
+                label: "名称",
                 ariaDescribedBy: t ? this.ERRORS_ID : void 0,
                 initialValue: this.props.initialName,
                 onValueChange: this.onBranchNameChange,
@@ -87654,11 +87654,11 @@
         getHeaderText = () =>
           void 0 !== this.props.headerText
             ? this.props.headerText
-            : "Create a branch";
+            : "创建分支";
         getOkButtonText = () =>
           void 0 !== this.props.okButtonText
             ? this.props.okButtonText
-            : "Create branch";
+            : "创建分支";
         onBranchNameChange = (e) => {
           this.updateBranchName(e);
         };
