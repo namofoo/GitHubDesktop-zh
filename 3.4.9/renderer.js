@@ -90242,7 +90242,7 @@
           return ke.createElement(
             PD,
             {
-              title: "远程上较新的提交",
+              title: "远程分支上有较新的提交",
               dismissDisabled: this.state.isLoading,
               disabled: this.state.isLoading,
               onDismissed: this.props.onDismissed,
@@ -90256,7 +90256,7 @@
               ke.createElement(
                 "p",
                 null,
-                "Desktop 无法将提交推送到此分支,因为远程分支上有一些提交不存在于本地分支上.在推送之前获取这些新提交,以便将它们与本地提交保持一致."
+                "GitHub Desktop 无法将提交推送到此分支,因为远程分支上有一些提交不存在于本地分支上.在推送之前获取这些新提交,以便将它们与本地提交保持一致."
               )
             ),
             ke.createElement(
