@@ -104984,7 +104984,7 @@
                           value: o + t.value * a,
                         });
                       });
-                    const r = "Refreshing repository",
+                    const r = "正在刷新仓库",
                       s = o + a;
                     this.updatePushPullFetchProgress(e, {
                       kind: "generic",
