@@ -65967,7 +65967,7 @@
               ke.createElement(
                 "div",
                 { className: "image-diff-header" },
-                "Added"
+                "新增"
               ),
               ke.createElement(NM, { image: this.props.current })
             )
@@ -65985,7 +65985,7 @@
               ke.createElement(
                 "div",
                 { className: "image-diff-header" },
-                "Deleted"
+                "删除"
               ),
               ke.createElement(NM, { image: this.props.previous })
             )
@@ -71270,9 +71270,9 @@
                 description: Re().createElement(
                   Re().Fragment,
                   null,
-                  "Overwrite any changes on ",
+                  "覆盖所有更改 ",
                   t,
-                  " with your local changes",
+                  " 进行本地更改",
                   e
                 ),
                 action: this.props.forcePushWithLease,
@@ -90242,7 +90242,7 @@
           return ke.createElement(
             PD,
             {
-              title: "Newer commits on remote",
+              title: "远程上较新的提交",
               dismissDisabled: this.state.isLoading,
               disabled: this.state.isLoading,
               onDismissed: this.props.onDismissed,
@@ -90256,14 +90256,14 @@
               ke.createElement(
                 "p",
                 null,
-                "Desktop is unable to push commits to this branch because there are commits on the remote that are not present on your local branch. Fetch these new commits before pushing in order to reconcile them with your local commits."
+                "Desktop 无法将提交推送到此分支,因为远程分支上有一些提交不存在于本地分支上.在推送之前获取这些新提交,以便将它们与本地提交保持一致."
               )
             ),
             ke.createElement(
               _D,
               null,
               ke.createElement(ND, {
-                okButtonText: "Fetch",
+                okButtonText: "获取",
                 okButtonDisabled: this.state.isLoading,
               })
             )
