@@ -86613,7 +86613,7 @@
               fT,
               null,
               ke.createElement(mT, {
-                placeholder: "网址链接或用户名/仓库",
+                placeholder: "URL 或用户名/仓库",
                 value: this.props.url,
                 onValueChanged: this.onUrlChanged,
                 autoFocus: !0,
@@ -86623,7 +86623,7 @@
                   ke.createElement(
                     "p",
                     null,
-                    "仓库网址链接或GitHub用户名和仓库"
+                    "仓库 URL 或 GitHub 用户名和仓库"
                   ),
                   ke.createElement(
                     "p",
