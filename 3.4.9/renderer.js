@@ -1,3 +1,4 @@
+/*! For license information please see renderer.js.LICENSE.txt */
 (() => {
   var e = {
       4980: (e, t, n) => {
@@ -39733,7 +39734,7 @@
                   };
                   if (n) {
                     const remoteName = t.name === 'origin' ? '远程仓库' : t.name;
-                    const e = `同步 ${remoteName}`,
+                    const e = `获取 ${remoteName}`,
                       i = "fetch";
                     (s = await dg(
                       { ...s, trackLFSProgress: !0, isBackgroundTask: r },
@@ -71246,7 +71247,7 @@
           switch (e) {
             case AI.Fetch:
               return {
-                title: `同步 ${translatedRemoteName}`,
+                title: `获取 ${translatedRemoteName}`,
                 description: `拉取最新的更改 ${translatedRemoteName}`,
                 action: this.props.fetch,
                 icon: zu,
@@ -71583,7 +71584,7 @@
           });
         }
         fetchButton(e, t, n) {
-          const r = `同步 ${e}`;
+          const r = `获取 ${e}`;
           return ke.createElement(SI, {
             ...this.defaultButtonProps(),
             title: r,
@@ -83706,7 +83707,7 @@
               ke.createElement(
                 cD,
                 { onClick: this.onOpenAccessibilitySettings },
-                "辅助功能设置"
+                "accessibility settings"
               ),
               " ",
               "to control the visibility of the link underlines and diff check marks."
@@ -84000,14 +84001,14 @@
             ke.createElement(
               "p",
               { className: "git-settings-description" },
-              "这些设置将更改",
+              "这些首选项将",
               " ",
               this.props.selectedExternalEditor &&
                 this.props.globalGitConfigPath
                 ? ke.createElement(
                     cD,
                     { onClick: this.openGlobalGitConfigInEditor },
-                    "编辑全局 Git 配置文件"
+                    "编辑你的全局 Git 配置文件"
                   )
                 : "edit your global Git config file",
               "."
@@ -84566,11 +84567,11 @@
         renderSwitchBranchOptionLabel = (e) => {
           switch (e) {
             case Qw.AskForConfirmation:
-              return "询问我要在哪里进行更改";
+              return "询问我想要更改到哪里";
             case Qw.MoveToNewBranch:
-              return "始终将更改应用到新分支";
+              return "始终将更改带到新分支";
             case Qw.StashOnCurrentBranch:
-              return "始终将更改应用当前分支";
+              return "始终在当前分支上存储并保留我的更改";
             default:
               return ot(0, `Unknown uncommitted changes strategy: ${e}`);
           }
@@ -84590,7 +84591,7 @@
             ke.createElement(
               "h2",
               { id: "switch-branch-heading" },
-              "如果有变更并切换分支"
+              "如果有更改并且切换分支"
             ),
             ke.createElement(XD, {
               ariaLabelledBy: "switch-branch-heading",
@@ -84780,7 +84781,7 @@
             ke.createElement(
               "div",
               { className: "advanced-section" },
-              ke.createElement("h2", null, "辅助可访问性"),
+              ke.createElement("h2", null, "辅助功能"),
               ke.createElement(_T, {
                 label: "下划线链接",
                 value: this.props.underlineLinks ? IT.On : IT.Off,
@@ -87239,7 +87240,7 @@
             return 0 === (await (0, w.readdir)(e)).length
               ? null
               : new Error(
-                  "This folder contains files. Git can only clone to empty folders."
+                  "此文件夹包含文件. Git 只能克隆到空文件夹."
                 );
           } catch (e) {
             return "ENOTDIR" === e.code
@@ -92595,21 +92596,21 @@
                 checkedOption: n,
                 options: [
                   {
-                    label: "Create a merge commit",
+                    label: "创建合并提交",
                     description:
-                      "The commits from the selected branch will be added to the current branch via a merge commit.",
+                      "所选分支的提交将通过合并提交添加到当前分支.",
                     id: "Merge",
                   },
                   {
-                    label: "Squash and merge",
+                    label: "压缩并合并",
                     description:
-                      "The commits in the selected branch will be combined into one commit in the current branch.",
+                      "所选分支中的提交将合并为当前分支中的一个提交.",
                     id: "Squash",
                   },
                   {
-                    label: "Rebase",
+                    label: "变基",
                     description:
-                      "The commits from the selected branch will be rebased and added to the current branch.",
+                      "所选分支的提交将被重新设定并添加到当前分支.",
                     id: "Rebase",
                   },
                 ],
@@ -93144,7 +93145,7 @@
             r = null !== t && null !== e && t.name === e.name,
             s = n?.kind === Xw.Clean && n.commits.length > 0;
           return r
-            ? "You are not able to rebase this branch onto itself."
+            ? "您无法将此分支变基到其自身."
             : s
             ? void 0
             : "There are no commits on the current branch to rebase.";

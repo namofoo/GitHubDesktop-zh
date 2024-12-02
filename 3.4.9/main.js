@@ -8186,7 +8186,7 @@
                     click: Oe("pull")
                 }, {
                     id: "fetch",
-                    label: "同步(&F)",
+                    label: "获取(&F)",
                     accelerator: "CmdOrCtrl+Shift+T",
                     click: Oe("fetch")
                 }, {
@@ -8271,7 +8271,7 @@
                 accelerator: "CmdOrCtrl+Shift+H",
                 click: Oe("squash-and-merge-branch")
             }, {
-                label: "定位当前分支(&E)",
+                label: "重新设置当前分支​​(&E)",
                 id: "rebase-branch",
                 accelerator: "CmdOrCtrl+Shift+E",
                 click: Oe("rebase-branch")
