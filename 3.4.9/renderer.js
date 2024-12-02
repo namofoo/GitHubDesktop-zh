@@ -80396,7 +80396,7 @@
                 ? n.kind === et.History
                   ? "选择要比较的分支"
                   : void 0
-                : "没有要比较的分支";
+                : "没有可供比较的分支";
             })(this.props.compareState);
           return ke.createElement(
             "div",
@@ -92199,8 +92199,9 @@
             });
         }
         render() {
-          const { operation: e, onDismissed: t } = this.props,
-            n = `${e} 将需要强制推送`;
+          const { operation: originalOperation, onDismissed: t } = this.props;
+          const e = originalOperation === "Amend" ? "修改" : originalOperation; 
+            n = `${e}将需要强制推送`;
           return ke.createElement(
             PD,
             {
@@ -92219,16 +92220,16 @@
               ke.createElement(
                 "p",
                 { id: "warn-force-push-confirmation-title" },
-                "您确定要 ",
+                "您确定要",
                 e.toLowerCase(),
                 "?"
               ),
               ke.createElement(
                 "p",
                 { id: "warn-force-push-confirmation-message" },
-                "At the end of the ",
+                "在",
                 e.toLowerCase(),
-                " flow, GitHub Desktop 将允许您强制推送分支以更新上游分支.强制推送将更改远程上的历史记录,并可能给在此分支上协作的其他人带来问题."
+                "流程结束时, GitHub Desktop 将允许您强制推送分支以更新上游分支.强制推送将更改远程上的历史记录,并可能给在此分支上协作的其他人带来问题."
               ),
               ke.createElement(
                 "div",
@@ -92246,7 +92247,7 @@
               _D,
               null,
               ke.createElement(ND, {
-                okButtonText: `开始 ${e.toLowerCase()}`,
+                okButtonText: `开始${e.toLowerCase()}`,
                 onCancelButtonClick: this.props.onDismissed,
               })
             )
