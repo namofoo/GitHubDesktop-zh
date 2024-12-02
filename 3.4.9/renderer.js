@@ -104629,7 +104629,7 @@
             return (
               this.updateCheckoutProgress(e, {
                 kind: "checkout",
-                title: "正在刷新仓库",
+                title: "Refreshing repository",
                 description: "Checking out",
                 value: 1,
                 target: t,
@@ -104984,7 +104984,7 @@
                           value: o + t.value * a,
                         });
                       });
-                    const r = "正在刷新仓库",
+                    const r = "Refreshing repository",
                       s = o + a;
                     this.updatePushPullFetchProgress(e, {
                       kind: "generic",
@@ -105145,7 +105145,7 @@
                         log.error("Failed updating remote HEAD", e)
                       ));
                   const u = r + o,
-                    h = "刷新仓库";
+                    h = "正在刷新仓库";
                   this.updatePushPullFetchProgress(e, {
                     kind: "generic",
                     title: h,
