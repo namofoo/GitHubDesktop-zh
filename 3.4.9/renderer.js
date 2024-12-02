@@ -64689,9 +64689,9 @@
             : mM(this.summaryOrPlaceholder)
             ? "提交时需要提交摘要"
             : !this.props.anyFilesSelected && this.props.anyFilesAvailable
-            ? "Select one or more files to commit"
+            ? "选择一个或多个文件进行提交"
             : this.props.isCommitting
-            ? "Committing changes…"
+            ? "提交更改"
             : void 0;
         }
         renderSubmitButton() {
