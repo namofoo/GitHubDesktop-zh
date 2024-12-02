@@ -31612,9 +31612,9 @@
       const ch = [".cmd", ".exe", ".bat", ".sh"],
         uh = "复制文件路径",
         hh = "复制相对文件路径",
-        ph = "Open in external editor",
-        dh = "在资源管理器中显示",
-        mh = "Recycle Bin",
+        ph = "使用外部编辑器打开",
+        dh = "在文件管理器中显示",
+        mh = "回收站",
         fh = "使用默认程序打开";
       function gh(e) {
         return -1 === ch.indexOf(e.toLowerCase());
@@ -69398,7 +69398,7 @@
         getOpenInExternalEditorMenuItem = (e, t) => {
           const { externalEditorLabel: n } = this.props;
           return {
-            label: n ? `Open in ${n}` : ph,
+            label: n ? `使用 ${n} 打开` : ph,
             action: () => {
               this.props.onOpenItemInExternalEditor(e.path);
             },
