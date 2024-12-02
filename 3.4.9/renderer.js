@@ -77936,7 +77936,7 @@
             a = [],
             l = [];
           n.ahead > 0 &&
-            (a.push("commits"),
+            (a.push("提交"),
             l.push(
               1 === n.ahead ? "1 个本地提交" : `${n.ahead} local commits`
             )),
@@ -77944,7 +77944,7 @@
               r.length > 0 &&
               (a.push("tags"),
               l.push(1 === r.length ? "1 tag" : `${r.length} tags`));
-          const c = `你有 ${l.join(" and ")} 等待被推到 ${
+          const c = `你有 ${l.join(" and ")}等待被推到 ${
               o ? "GitHub" : "the remote"
             }.`,
             u = ke.createElement(
@@ -77953,8 +77953,8 @@
               "当有本地提交等待推送或",
               this.renderDiscoverabilityKeyboardShortcut(i)
             ),
-            h = `Push ${a.join(" and ")} to the ${t.name} remote`,
-            p = `Push ${t.name}`;
+            h = `推送${a.join(" and ")}至${t.name}的远程分支`,
+            p = `推送 ${t.name}`;
           return ke.createElement(_P, {
             key: "push-branch-action",
             title: h,
