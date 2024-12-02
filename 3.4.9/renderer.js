@@ -61038,7 +61038,7 @@
                 ke.createElement(
                   "span",
                   { className: "description" },
-                  "Search for user"
+                  "搜索用户"
                 )
               );
         }
@@ -61237,12 +61237,12 @@
                 className: "label",
                 htmlFor: "author-input",
               },
-              "Co-Authors "
+              "协作者"
             ),
             this.renderAuthors(),
             ke.createElement(Wx, {
               elementId: "author-input",
-              placeholder: "@username",
+              placeholder: "@用户名",
               alwaysAutocomplete: !0,
               autocompletionProviders: [this.props.autoCompleteProvider],
               autocompleteItemFilter: this.getAutocompleteItemFilter(
@@ -69962,7 +69962,7 @@
               ke.createElement(
                 "div",
                 { className: "ago" },
-                "Committed ",
+                "提交 ",
                 ke.createElement(sI, { date: n })
               ),
               ke.createElement(JP, {
@@ -71340,7 +71340,7 @@
           ? ke.createElement(
               "span",
               null,
-              "拉取 ",
+              "最后获取 ",
               ke.createElement(sI, { date: e })
             )
           : "从未获取";
@@ -78852,21 +78852,21 @@
               trapFocus: !1,
               style: { width: e - 20 + "px" },
             },
-            ke.createElement("h4", null, "Reorder commits"),
+            ke.createElement("h4", null, "重新排序提交"),
             ke.createElement(
               "p",
               null,
-              "Use ",
+              "使用 ",
               ke.createElement(Cu, { darwinKeys: ["↑"], keys: ["↑"] }),
               ke.createElement(Cu, { darwinKeys: ["↓"], keys: ["↓"] }),
-              " to choose a new location."
+              " 选择一个新位置。."
             ),
             ke.createElement(
               "p",
               null,
-              "Press ",
+              "按下 ",
               ke.createElement(Cu, { darwinKeys: ["⏎"], keys: ["⏎"] }),
-              " to confirm."
+              " 确认."
             )
           );
         };
@@ -78930,7 +78930,7 @@
               enabled: o && void 0 !== this.props.onResetToCommit,
             }),
             u.push({
-              label: "Checkout commit",
+              label: "检查提交",
               action: () => {
                 this.props.onCheckoutCommit?.(t);
               },
@@ -78970,7 +78970,7 @@
           return (
             u.push(
               {
-                label: "Cherry-pick commit…",
+                label: "挑选提交",
                 action: () => this.props.onCherryPick?.(this.selectedCommits),
                 enabled: this.canCherryPick(),
               },
@@ -85429,7 +85429,7 @@
           return ke.createElement("p", null, t.message);
         }
         getTitle(e) {
-          return QL(e) ? "Clone failed" : "Error";
+          return QL(e) ? "Clone failed" : "出错";
         }
         renderContentAfterErrorMessage(e) {
           if (!YL(e)) return;
@@ -90527,7 +90527,7 @@
             {
               id: "checkout-commit",
               type: "warning",
-              title: "Checkout commit?",
+              title: "检查提交?",
               loading: this.state.isCheckingOut,
               disabled: this.state.isCheckingOut,
               onSubmit: this.onSubmit,
@@ -90541,13 +90541,13 @@
               ke.createElement(
                 fT,
                 { id: "checking-out-commit-confirmation" },
-                "Checking out a commit will create a detached HEAD, and you will no longer be on any branch. Are you sure you want to checkout this commit?"
+                "检查提交将创建一个分离的 HEAD,并且您将不再位于任何分支上.您确定要检查此提交吗？"
               ),
               ke.createElement(
                 fT,
                 null,
                 ke.createElement(_T, {
-                  label: "Do not show this message again",
+                  label: "不再显示此消息",
                   value: this.state.confirmCheckoutCommit ? IT.Off : IT.On,
                   onChange: this.onaskForConfirmationOnCheckoutCommitChanged,
                 })
@@ -90558,7 +90558,7 @@
               null,
               ke.createElement(ND, {
                 destructive: !0,
-                okButtonText: "Checkout",
+                okButtonText: "查看",
               })
             )
           );
@@ -92901,14 +92901,14 @@
         renderOkButtonText() {
           const { selectedBranch: e, isCreateBranchState: t } = this.state;
           if (t) return "Cherry-pick to new branch";
-          const n = this.props.commitCount > 1 ? "commits" : "commit",
-            r = `Cherry-pick ${this.props.commitCount} ${n}`;
+          const n = this.props.commitCount > 1 ? "commits" : "个提交",
+            r = `挑选 ${this.props.commitCount} ${n}`;
           return null !== e
             ? ke.createElement(
                 ke.Fragment,
                 null,
                 r,
-                " to ",
+                "到 ",
                 ke.createElement("strong", null, e.name),
                 "…"
               )
@@ -92922,9 +92922,9 @@
         };
         render() {
           const e = this.selectedBranchIsCurrentBranch()
-              ? "You are not able to cherry-pick from and to the same branch"
+              ? "你不能从同一个分支中进行挑选"
               : void 0,
-            t = this.props.commitCount > 1 ? "commits" : "commit";
+            t = this.props.commitCount > 1 ? "commits" : "个提交";
           return ke.createElement(
             PD,
             {
@@ -92934,11 +92934,11 @@
               title: ke.createElement(
                 "strong",
                 null,
-                "Cherry-pick ",
+                "挑选 ",
                 this.props.commitCount,
                 " ",
                 t,
-                " to a branch"
+                "到分支"
               ),
             },
             ke.createElement(
