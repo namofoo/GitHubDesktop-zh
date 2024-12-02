@@ -104629,7 +104629,7 @@
             return (
               this.updateCheckoutProgress(e, {
                 kind: "checkout",
-                title: "Refreshing repository",
+                title: "正在刷新仓库",
                 description: "Checking out",
                 value: 1,
                 target: t,
@@ -104984,7 +104984,7 @@
                           value: o + t.value * a,
                         });
                       });
-                    const r = "正在刷新仓库",
+                    const r = "Refreshing repository",
                       s = o + a;
                     this.updatePushPullFetchProgress(e, {
                       kind: "generic",
