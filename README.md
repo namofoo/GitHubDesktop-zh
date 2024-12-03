@@ -3,3 +3,4 @@
 
 ## 汉化预览
 ![](https://github.com/wroldLove/GitHubDesktop-zh/blob/main/Preview.png)
+![](https://github.com/wroldLove/GitHubDesktop-zh/blob/main/image.png)
