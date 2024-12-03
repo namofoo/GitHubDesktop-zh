@@ -63191,7 +63191,7 @@
                     ariaLabel: "Learn more about commit attribution",
                     uri: "https://docs.github.com/en/github/committing-changes-to-your-project/why-are-my-commits-linked-to-the-wrong-user",
                   },
-                  "Learn more."
+                  "了解更多."
                 );
           return ke.createElement(
             ke.Fragment,
@@ -63202,9 +63202,9 @@
           );
         }
         buildScreenReaderMessage(e) {
-          const t = e ? "" : "Your commits will be wrongly attributed. ";
+          const t = e ? "" : "您的提交将被错误归属.";
           return `这个邮箱地址${
-            e ? "匹配" : "does not match"
+            e ? "匹配" : "不匹配"
           } ${this.getAccountTypeDescription()}. ${t}`;
         }
         render() {
@@ -88128,7 +88128,7 @@
             {
               id: "install-git",
               type: "warning",
-              title: "Unable to locate Git",
+              title: "无法找到 Git",
               onSubmit: this.onSubmit,
               onDismissed: this.props.onDismissed,
             },
@@ -88138,23 +88138,23 @@
               ke.createElement(
                 "p",
                 null,
-                "We were unable to locate Git on your system. This means you won't be able to execute any Git commands in the",
+                "我们无法在您的系统上找到 Git.这意味着您将无法在",
                 " ",
-                "command prompt",
+                "命令提示符中执行任何 Git 命令",
                 "."
               ),
               ke.createElement(
                 "p",
                 null,
-                "To help you get Git installed and configured for your operating system, we have some external resources available."
+                "为了帮助您在操作系统上安装和配置 Git,我们提供了一些外部资源."
               )
             ),
             ke.createElement(
               _D,
               null,
               ke.createElement(ND, {
-                okButtonText: "Open without Git",
-                cancelButtonText: "Install Git",
+                okButtonText: "不使用 Git 打开",
+                cancelButtonText: "安装 Git",
                 onCancelButtonClick: this.onExternalLink,
               })
             )
