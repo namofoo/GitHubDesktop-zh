@@ -63203,8 +63203,8 @@
         }
         buildScreenReaderMessage(e) {
           const t = e ? "" : "Your commits will be wrongly attributed. ";
-          return `This email address ${
-            e ? "matches" : "does not match"
+          return `这个邮箱地址${
+            e ? "匹配" : "does not match"
           } ${this.getAccountTypeDescription()}. ${t}`;
         }
         render() {
@@ -63228,15 +63228,15 @@
         }
         getAccountTypeDescription() {
           return 1 === this.props.accounts.length
-            ? `your ${
+            ? `您的 ${
                 this.props.accounts[0].endpoint === er()
                   ? "GitHub"
                   : "GitHub Enterprise"
-              } account`
+              } 帐户`
             : "either of your GitHub.com nor GitHub Enterprise accounts";
         }
       }
-      const eM = "Other";
+      const eM = "其他";
       class tM extends ke.Component {
         emailInputRef = ke.createRef();
         constructor(e) {
